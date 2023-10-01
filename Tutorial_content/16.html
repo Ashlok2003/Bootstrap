@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+        Text & List Style Classes in Bootstrap
+
+        Font-size classes
+            * actually not similar just aded for reference point of view
+        .display-1  ~ similar to h1
+        .display-2  ~ similar to h2
+        .display-3  ~ similar to h3
+        .display-4  ~ similar to h4
+        .lead       ~ similar to h5
+
+
+        List style classes in Bootstrap
+
+        .list-unstyled = to remove those bullet points
+
+
+        <ul> -> .list-inline
+            <li> -> .list-inline-item
+            <li> -> .list-inline-item
+
+
+        BlockQuote Classes in Bootstrap
+
+        Eg:
+
+        <blockquote class="blockquote blockquote-primary">
+            "If you want extraordinary result you must put in extraordinary efforts."
+            <cite>~ Ashlok Chaudhary</cite>
+        </blockquote>
+
+
+        user select classes in Bootstrap 
+
+        .user-select-all    {in an single click on any character whole text is selected}
+        .user-select-auto   {default}
+        .user-select-none   {resitrict user to select the text}
+        
+    -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 py-md-2 pb-md-5 text-center">
+                <h2 class="display-1 user-select-none">Text Formatting Classes</h2>
+            </div>
+            <div class="col-md-12 py-3 text-end">
+                <blockquote class="blockquote blockquote-primary user-select-all">
+                    "If you want extraordinary result you must put in extraordinary efforts."
+                    <br>
+                    <cite class="blockquote-footer">~ Ashlok Chaudhary</cite>
+                </blockquote>
+
+            </div>
+            <div class="col-md-4 mx-auto">
+                <!-- This will align list contents in an single inline format -->
+                <ul class="list-inline">
+                    <li class="list-inline-item">Orange</li>
+                    <li class="list-inline-item">Guava</li>
+                    <li class="list-inline-item">Pomgranate</li>
+                </ul>
+            </div>
+            <div class="col-md-4 mx-auto bg-warning">
+                <h2 class="text-danger display-3">Sub Heading</h2>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nostrum rerum
+                    architecto labore
+                    sed. Facere explicabo quibusdam sapiente, eligendi minus minima id illo provident dolorum, aliquam
+                    sequi ipsam expedita reprehenderit!</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap CDN  Integration  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+
+
+<!--======================================================================================================
+Certainly! The `class="text-capitalize btn btn-primary px-5 py-2"` code is used to style a button 
+    element using Bootstrap's CSS classes. Let's break down each part of this code:
+========================================================================================================
+1. `"text-capitalize"`: This class is a Bootstrap utility class that capitalizes the text content 
+    of the button. In other words, it ensures that the text inside the button appears in title case, 
+    where the first letter of each word is capitalized.
+2. `"btn"`: This class is a fundamental Bootstrap class for styling buttons. It provides basic button 
+    styling, including background color, border, and padding.
+3. `"btn-primary"`: This class is used in conjunction with the `"btn"` class to specify the primary 
+    button color. In Bootstrap, primary buttons typically have a blue color. 
+    You can replace `"btn-primary"` with other contextual classes like `"btn-secondary"`, `"btn-success"`, 
+    `"btn-danger"`, etc., to change the button's color scheme.
+4. `"px-5"`: This class is a Bootstrap utility class that adds horizontal padding to the button. 
+    In this case, it adds padding of `1.25rem` (20px) on both the left and right sides of the button.
+5. `"py-2"`: This class is a Bootstrap utility class that adds vertical padding to the button. 
+    It adds padding of `0.5rem` (8px) to both the top and bottom of the button.
+So, when you apply all these classes to a button element, it will have the following 
+characteristics:
+    - The text inside the button will be in title case (capitalized).
+    - The button will have the primary color (typically blue) specified by the `"btn-primary"` class.
+    - The button will have horizontal padding of 20px on both sides (`"px-5"`).
+    - The button will have vertical padding of 8px on both the top and bottom (`"py-2"`).
+
+This combination of classes allows you to create a stylized and capitalized primary
+button with specific padding in Bootstrap. You can adjust the padding and color by modifying the `"px-5"`
+and `"btn-primary"` classes to suit your design preferences.
+
+
+Example: Refer the attested side :)
+    <button class="text-capitalize btn btn-primary px-5 py-2" data-bs-toggle="tooltip"
+                            data-bs-title="Default tooltip">Contact us</button>
+----------------------------------------------------------------------------------------------------

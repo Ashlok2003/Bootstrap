@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Reordering in Bootstrap
+        * reordering of columns
+
+        As per the breakpoints of different classes 
+
+                Extra-Large  :   .order-xl-first, .order-xl-last
+                Large        :   .order-lg-first, .order-lg-last
+                Medium       :   .order-md-first, .order-md-last
+                Small        :   .order-sm-first, .order-sm-last
+                Extra Small  :   not defined
+
+                {.order-first , .order -last} superior parent classes
+
+
+        Reordering with grid numbers
+            .order-* [* here is the grid position as per the no of components]
+
+                Extra-Large  :   .order-xl-*
+                Large        :   .order-lg-*
+                Medium       :   .order-md-*
+                Small        :   .order-sm-*
+                Extra Small  :   not defined
+
+                * -> {0-12} in range
+            -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col order-last orange">Col 1</div>
+            <div class="col red">Col 2</div>
+            <div class="col order-first pink">Col 3</div>
+            <div class="col green">Col 4</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-6 pink order-lg-first order-md-last">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum debitis repellat voluptates illo eum
+                repellendus quibusdam est modi nostrum, ea adipisci asperiores rerum illum dolore facilis maiores quam,
+                dolores sed.
+                Voluptatibus fugiat soluta harum mollitia eaque ullam eveniet! Fuga hic consectetur, error voluptas eos
+                repellat asperiores excepturi nam ea doloribus laudantium sed est itaque quisquam obcaecati molestias
+                non aut quis.
+            </div>
+            <div class="col-lg-3 col-md-6 green order-lg-last order-md-first">
+                <i>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, culpa! Asperiores labore aliquid sequi
+                    tempora soluta, impedit iusto excepturi amet alias earum culpa aut adipisci commodi magnam et
+                    delectus!
+                    Sit!
+                    Quam laborum placeat temporibus perferendis repellat, vero commodi reprehenderit delectus corrupti
+                    necessitatibus soluta sapiente autem aperiam nesciunt sequi? Veritatis repellendus velit laboriosam
+                    cupiditate, sed eius quasi voluptatem animi deserunt praesentium.</i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap CDN  Integration  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+       # Button classes in Bootstrap
+
+        .btn-primary    lightblue
+        .btn-secondary  grey
+        .btn-success    green
+        .btn-danger     red
+        .btn-warning    yellow
+        .btn-info       cyan
+        .btn-light      white
+        .btn-dark       dark
+        .btn-link       white bg + blue text
+
+       # Outline button classes
+
+        .btn-outline-primary    lightblue
+        .btn-outline-secondary  grey
+        .btn-outline-success    green
+        .btn-outline-danger     red
+        .btn-outline-warning    yellow
+        .btn-outline-info       cyan
+        .btn-outline-light      white
+        .btn-outline-dark       dark
+
+
+        #   Button sizes in Bootstrap 
+
+        .btn-lg     large button
+        .btn-sm     small button
+
+        .btn-block => occupies the whole width of the parent class.
+
+        #   Active & Disabled Button Classes
+
+        .active
+        .disabled
+
+        #   Group Button Classes in bootstrap
+            Eg:
+                <div class="btn-group btn-group-lg">
+                    <button class="btn btn-primary">Button1</button>
+                    <button class="btn btn-secondary">Button2</button>
+                    <button class="btn btn-danger">Button3</button>
+                </div>
+
+        # Group Button toolbar Class
+            Eg:
+                <div class="btn-toolbar">
+                    <div class="btn-group me-3">
+                        <button class="btn btn-primary">Button1</button>
+                        <button class="btn btn-secondary">Button2</button>
+                        <button class="btn btn-danger">Button3</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary">Button1</button>
+                        <button class="btn btn-secondary">Button2</button>
+                    </div>
+                </div>
+            </div>
+
+        # Vertical Button format
+            Eg:
+                <div class="btn-group btn-group-vertical">
+                <button class="btn btn-primary">Button1</button>
+                <button class="btn btn-secondary">Button2</button>
+                <button class="btn btn-danger">Button3</button>
+            </div>
+
+        # Group Nesting Button Classes
+            Eg:
+                <div class="col">
+                <div class="btn-group">
+                    <button class="btn btn-primary">Button1</button>
+                    <button class="btn btn-secondary">Button2</button>
+                    <a href="" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        Click Me !
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">DropDown Link 1</a>
+                        <a href="" class="dropdown-item">DropDown Link 2</a>
+                    </div>
+                </div>
+            </div>
+
+    -->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2> Button Classes</h2>
+            </div>
+            <div class="col-md-12 text-center mx-auto">
+                <button class="btn btn-primary active">Button 1</button>
+                <button class="btn btn-secondary disabled">Button 2</button>
+                <button class="btn btn-success">Button 3</button>
+                <button class="btn btn-danger">Button 4</button>
+
+                <button class="btn btn-warning">Button 5</button>
+                <button class="btn btn-info">Button 6</button>
+                <button class="btn btn-light">Button 7</button>
+                <button class="btn btn-dark">Button 8</button>
+                <button class="btn btn-link">Button 9</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2> Outline Button Classes</h2>
+            </div>
+            <div class="col-md-12 text-center mx-auto">
+                <button class="btn btn-outline-primary">Button 1</button>
+                <button class="btn btn-outline-secondary">Button 2</button>
+                <button class="btn btn-outline-success">Button 3</button>
+                <button class="btn btn-outline-danger">Button 4</button>
+
+                <button class="btn btn-outline-warning">Button 5</button>
+                <button class="btn btn-outline-info">Button 6</button>
+                <button class="btn btn-outline-light">Button 7</button>
+                <button class="btn btn-outline-dark">Button 8</button>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-primary col-12">Click Me!</button>
+            </div>
+        </div>
+
+        <div class="row py-3">
+            <div class="col-md-12 py-3 text-center">
+                <h2>Bootstrap Button Group Classes</h2>
+            </div>
+            <div class="col text-center">
+                <div class="btn-group btn-group-lg">
+                    <button class="btn btn-primary">Button1</button>
+                    <button class="btn btn-secondary">Button2</button>
+                    <button class="btn btn-danger">Button3</button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="btn-toolbar">
+                    <div class="btn-group me-3">
+                        <button class="btn btn-primary">Button1</button>
+                        <button class="btn btn-secondary">Button2</button>
+                        <button class="btn btn-danger">Button3</button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary">Button1</button>
+                        <button class="btn btn-secondary">Button2</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col text-center">
+            <div class="btn-group btn-group-vertical">
+                <button class="btn btn-primary">Button1</button>
+                <button class="btn btn-secondary">Button2</button>
+                <button class="btn btn-danger">Button3</button>
+            </div>
+        </div>
+        <!-- Group Nesting Button Classes -->
+        <div class="col">
+            <div class="btn-group">
+                <button class="btn btn-primary">Button1</button>
+                <button class="btn btn-secondary">Button2</button>
+                <a href="" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                    Click Me !
+                </a>
+                <div class="dropdown-menu">
+                    <a href="" class="dropdown-item">DropDown Link 1</a>
+                    <a href="" class="dropdown-item">DropDown Link 2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>

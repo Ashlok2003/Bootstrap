@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+        Bootstrap Images and video classes in Bootstrap
+
+        .img-fluid
+        .rounded
+        .img-thumnbail
+
+        For placing videos  we have some related tags associated with it :)
+
+        <iframe> , <embed> , <video> , <object>
+
+            example:
+                <div class="embed-responsive">
+
+                    Sixe ratios as per the requirements of the pages :)
+                        * embed - responsive - 21by9
+                        * embed - responsive - 16by9
+                        * embed - responsive - 4by3
+                        * embed - responsive - 1by1
+
+                    <iframe class = "embed-responsive-item" src= "">
+                <div>
+
+    -->
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Images & Video Classes</h2>
+        <div class="row py-3">
+            <div class="col-md-4" style="border: 2px solid black">
+                <img src="./coronavirus-6600290_1280.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-4 py-3">
+                <img src="./coronavirus-6600290_1280.png" alt="" class="img-fluid img-thumnbail rounded">
+            </div>
+            <div class="col-md-4 py-3">
+                <img src="./coronavirus-6600290_1280.png" alt="" class="img-fluid rounded-circle">
+            </div>
+            <div class="col-md-4 py-3">
+                <img src="./coronavirus-6600290_1280.png" alt="" class="img-fluid rounded-top">
+            </div>
+            <div class="col-md-4 py-3">
+                <img src="./coronavirus-6600290_1280.png" alt="" class="img-fluid rounded-bottom">
+                <!-- Similar to left, right also-->
+            </div>
+            <div class="col-md-4 py-3">
+                <img src="./coronavirus-6600290_1280.png" alt="" class="img-fluid rounded-pill">
+            </div>
+        </div>
+
+        <div class="row py-3">
+            <figure class="figure">
+                <img src="./coronavirus-6600290_1280.png" alt="" class="img-fluid figure-img">
+                <figcaption class="figure-caption text-end">Covid - 19 is one of the deadly viruses of 22th century
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Video Related classes starts here -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-21by9">
+                    <iframe class = "embed-responsive-item" src="https://www.youtube.com/embed/Wp-TsKwaFiU?si=wn7DRiePsowFbMq1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class = "embed-responsive-item" src="https://www.youtube.com/embed/Wp-TsKwaFiU?si=wn7DRiePsowFbMq1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe class = "embed-responsive-item" src="https://www.youtube.com/embed/Wp-TsKwaFiU?si=wn7DRiePsowFbMq1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="embed-responsive embed-responsive-1by1">
+                    <iframe class = "embed-responsive-item" src="https://www.youtube.com/embed/Wp-TsKwaFiU?si=wn7DRiePsowFbMq1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap CDN  Integration  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

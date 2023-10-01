@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Bootstrap Tooltips 
+        
+        data-bs-toggle = "tooltip"
+        data-bs-placement = "left / right / top / bottom"
+        title = "Hello Plese place Your Title here"
+
+        JQuery Intregration Code part
+            $(document).ready(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip({
+                html: true,
+                animation: false,
+                delay: { "show": 100, "hide": 1000 },
+                placement: "bottom",
+                title: `<img src="./coronavirus-6600290_1280.png" alt="" class = "img-fluid"><h2>Title Goes Here Ashlok</h2>`,
+                trigger: 'click'
+            });
+        });
+
+        Tooltips Methods:
+
+        . show
+        . hide
+        . toggle
+        . Dispose
+        . Enable
+        . Disable
+        . toggleEnabled
+        
+        Toottops Event classes Methods
+
+        . show.bs.tooltip
+        . shown.bs.tooltip
+        . hide.bs.tooltip
+        . hidden.bs.tooltip
+        . inserted.bs.tooltip
+
+
+    
+    -->
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Tooltips</h2>
+        <div class="row py-3">
+            <div class="col-md-7 mx-auto text-center">
+                <button type="button" class="btn btn-primary" data-bs-toggle="tooltip">
+                    Tooltip on top
+                </button>
+                <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="right"
+                    title="Tooltip on right">
+                    Tooltip on right
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Tooltip on bottom">
+                    Tooltip on bottom
+                </button>
+                <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Tooltip on left">
+                    Tooltip on left
+                </button>
+            </div>
+            <!-- Methods of Tooltips -->
+            <div class="col-md-7">
+                <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top"
+                    id="example" title="Example ToolTip of Example">
+                    Method 1
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    id="showbtn" title="showing button">
+                    SHOWING
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="left"
+                    id="hidebtn" title="hiding button">
+                    HIDING
+                </button>
+            </div>
+            <div class="col-md-7 mt-3">
+                <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top"
+                    id="example2" title="Example ToolTip of Example">
+                    SHOW & HIDE
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    id="toggle" title="Toggle button">
+                    Toggle
+                </button>
+
+            </div>
+            <div class="col-md-7 mt-4">
+                <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top"
+                    id="example3" title="Example ToolTip of Example">
+                    Enable & Disable
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    id="enable" title="showing button">
+                    Enable
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="left"
+                    id="disable" title="hiding button">
+                    Disable
+                </button>
+            </div>
+
+            <div class="col-md-7 py-4">
+                <!-- Events in Tooltips....-->
+                <button type="button" class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top"
+                    id="example4" title="Example ToolTip of Example">
+                    Enable & Disable
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    id="event1" title="showing button">
+                    Event 1
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="tooltip" data-bs-placement="left"
+                    id="event2" title="hiding button">
+                    Event 2
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JQuery CDN Integration -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Popper.js CDN Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script>
+        /* $(document).ready(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip({
+                html: true,
+                animation: false,
+                delay: { "show": 100, "hide": 1000 },
+                placement: "bottom",
+                title: `<img src="./coronavirus-6600290_1280.png" alt="" class = "img-fluid"><h2>Title Goes Here Ashlok</h2>`,
+                trigger: 'click'
+            });
+        }); */
+
+        $(document).ready(() => {
+            $('[data-bs-toggle="tooltip"]').tooltip({
+                html: true,
+                animation: false,
+                delay: { "show": 100, "hide": 1000 },
+                /* placement: "bottom",
+                title: `<img src="./coronavirus-6600290_1280.png" alt="" class = "img-fluid"><h2>Title Goes Here Ashlok</h2>`,
+                trigger: 'click' */
+            });
+            /* Dispose attribute is ues to remove the above code functionaly of tooltip from the element which is on it is applied. */
+            /* toggleEnabled is also use in same manner but come with disable and enable in alternative event switching manner*/
+
+            $('#showbtn').click(() => {
+                $("#example").tooltip('show');
+            })
+            $('#hidebtn').click(() => {
+                $("#example").tooltip('hide');
+            })
+            $('#toggle').click(() => {
+                $("#example2").tooltip('toggle');
+            })
+
+            $('#enable').click(() => {
+                $("#example3").tooltip('enable');
+            })
+            $('#disable').click(() => {
+                $("#example3").tooltip('disable');
+            })
+            $("#example4").on('show.bs.tooltip', () => {
+                alert('show');
+            })
+            $("#example4").on('inserted.bs.tooltip', () => {
+                alert('inserted');
+            })
+
+            $("#example4").on('shown.bs.tooltip', () => {
+                alert('shown');
+            })
+
+            $("#example3").on('hide.bs.tooltip', () => {
+                alert('hide');
+            })
+            $("#example3").on('hidden.bs.tooltip', () => {
+                alert('hidden');
+            })
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>
