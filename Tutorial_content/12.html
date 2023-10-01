@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        Padding and margin Classes in Bootstrap extra
+
+        # Padding as per the axial convention
+
+        Y-Axis Padding  :   .py-*
+        X-Axis Padding  :   .px-*
+
+        Y-Axis Margin  :   .my-*
+        X-Axis Margin  :   .mx-*
+
+        .g-0 gutter class
+
+        *[0-5] as per the rem convention 
+
+        Padding and margin as per different break Points:
+                        Padding Y       Padding X       Margin Y        Margin X
+        Extra Large :   .py-xl-*        .px-xl-*        .my-xl-*        .mx-xl-*
+        large       :   .py-lg-*        .px-lg-*        .my-lg-*        .mx-lg-*
+        Medium      :   .py-md-*        .px-md-*        .my-md-*        .mx-md-*
+        Small       :   .py-sm-*        .px-sm-*        .my-sm-*        .mx-sm-*
+        ExtraSmall  :   ----------------------------------------------------------
+
+        Negative margin Classes in Bootstrap    *[0-5] as per the rem convention 
+        
+                        Margin Y        Margin X
+        Extra Large :   .my-xl-n*        .mx-xl-n*
+        large       :   .my-lg-n*        .mx-lg-n*
+        Medium      :   .my-md-n*        .mx-md-n*
+        Small       :   .my-sm-n*        .mx-sm-n*
+        ExtraSmall  :   --------------------------
+
+    -->
+
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-4 py-5">
+                <div class="green">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsum repudiandae mollitia reiciendis
+                    esse. Eius corporis illum quas. Ratione, sequi!</div>
+            </div>
+            <div class="col-md-4 mx-3">
+                <div class="pink px-lg-5 py-lg-n5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsum repudiandae mollitia reiciendis
+                    esse. Eius corporis illum quas. Ratione, sequi!</div>
+            </div>
+            <div class="col-md-4 g-4">
+                <p class="red py-md-n5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsum repudiandae mollitia
+                    reiciendis
+                    esse. Eius corporis illum quas. Ratione, sequi!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap CDN  Integration  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

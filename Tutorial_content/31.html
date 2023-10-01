@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .custom-popover {
+            .custom-popover {
+                --popover-bg: var(--bs-secondary);
+                /* Set the background color */
+                --popover-color: var(--bs-white);
+                /* Set the text color */
+                --popover-border-color: var(--bs-secondary);
+                /* Set the border color */
+                --popover-border-width: 2px;
+                /* Set the border width */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+        Popover Plugin In Bootstrap........
+
+        ===> Methods associated with  Bootstrap
+
+        . show
+        . hide
+        . toggle
+        . Dispose
+        . Enable
+        . Disable
+        . toggleEnabled
+
+        ===> Events associated with popover
+
+        . show.bs.popover
+        . shown.bs.popover
+        . hide.bs.popover
+        . hidden.bs.popover
+        . inserted.bs.popover
+
+
+    -->
+    <div class="container">
+        <h2 class="text-center py-3">Popover Plugin in Bootstrap</h2>
+        <div class="row py-3">
+            <div class="col-md-12 mx-auto d-flex flex-column align-items-center justify-content-center">
+                <div>
+                    <button type="button" class="btn btn-secondary me-5" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="top" data-bs-custom-class="custom-popover"
+                        data-bs-title="Custom Top popover"
+                        data-bs-content="<h2>This popover is themed via CSS variables.</h2>">
+                        Popover on top
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="right" data-bs-content="Right popover">
+                        Popover on right
+                    </button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary mt-5 me-5" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="bottom" data-bs-custom-class="custom-popover"
+                        data-bs-content="Bottom popover">
+                        Popover on bottom
+                    </button>
+                    <button type="button" class="btn btn-secondary mt-5" data-bs-container="body"
+                        data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+                        Popover on left
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JQuery CDN Integration -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Popper.js CDN Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap CDN Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('[data-bs-toggle = "popover"]').popover({
+                html: true,
+                title: "Default title",
+                content: "default Content",
+                placement: "top",
+                trigger: 'focus'
+            });
+        })
+    </script>
+
+</body>
+
+</html>

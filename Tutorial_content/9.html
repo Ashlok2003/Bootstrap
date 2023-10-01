@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .col-3 {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Display Utilities & similar having break point porperties
+        
+        display: none       ->      .d-none
+        display: inline     ->      .d-inline
+        display: inline-block ->    .d-inline-block
+        display: block       ->     .d-block
+        display: table       ->     .d-table
+        display: table-cell  ->     .d-table-cell
+        display: table-row   ->     .d-table-row
+        display: flex        ->     .d-flex
+        display: inline-flex ->     .d-inline-flex
+
+
+        Print-utilities classes in bootstrap
+
+        .d-print-none
+        .d-print-inline
+        .d-print-inline-block
+        .d-print-block
+        .d-print-table
+        .d-print-table-row
+        .d-print-table-cell
+        .d-print-flex
+        .d-print-inline-flex
+
+        Theses print utilities class will be applied when we print the html page.
+
+    -->
+
+    <div class="container">
+        <div class="row d-print-block">
+            <div class="col-3 pink">
+                <h4>Column 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, ipsam!</p>
+            </div>
+            <div class="col-3 orange d-print-none">
+                <h4>Column 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolor tenetur tempora sint
+                    aspernatur accusantium facere. Expedita dolore maiores voluptatem!
+
+                </p>
+            </div>
+
+            <div class="col-3 green">
+                <h4>Column 3</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, officia?</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap CDN  Integration  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

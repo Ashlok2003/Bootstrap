@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Margin Utilities in Bootstrap -->
+    <!--
+        Information:
+            .m  ->  margin
+            .me ->  margin-right
+            .ms ->  margin-left
+            .mt ->  margin-top
+            .mb ->  margin-bottom
+
+        Device specific Break points :-> 
+
+                Extra-Large  :   .m-xl-*
+                Large        :   .m-lg-*
+                Medium       :   .m-md-*
+                Small        :   .m-sm-*
+                Extra Small  :   offset-defined
+
+            # similar for {me, ms, mt, mb} as per the device size configurations
+
+        Margin Classes for different sides
+
+        Margin          :   .m-*
+        Margin - right  :   .me-*
+        Margin - left   :   .ms-*
+        Margin - bottom :   .mb-*
+        Margin - top    :   .mt-*
+
+            *[0 - 5] in range
+
+        0 = 0 px
+        1 = 0.25 rem
+        2 = 0.50 rem
+        3 = 1.00 rem
+        4 = 1.50 rem
+        5 = 3.00 rem
+
+        # we can also do it for negative margins
+                Extra-Large  :   .{m, me, ms, mt, mb}-xl-n*
+                Large        :   .{m, me, ms, mt, mb}-lg-n*
+                Medium       :   .{m, me, ms, mt, mb}-md-n*
+                Small        :   .{m, me, ms, mt, mb}-sm-n*
+                Extra Small  :   offset-defined
+        *[0- 5] && n stands for negative
+     -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4 me-auto pink">Col 1</div>
+            <div class="col-4 ms-auto orange">Col 2</div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 me-lg-n5 mb-md-n4 ms-md-n4 orange">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita quis, dignissimos laboriosam
+                eius distinctio eveniet qui ipsum sint ut!
+            </div>
+            <div class="col-md-4 mt-md-4 green">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A vitae recusandae totam porro, nulla similique
+                ut eveniet maxime animi voluptates.
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+    <!-- Bootstrap CDN  Integration  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+    <!-- Bootstrap CDN  Integration  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(() => {
+            $('#exampleModal').modal({
+                backdrop: 'static',
+                keyboard: false // Helps us to avoid the esc character dismissal of modal-dialog-box
+            })
+
+            $('#exampleModal').on('hidePrevented.bs.modal', () => {
+                alert('Prevented');
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+    <!--
+        Modal Plugin in Bootstrap
+
+        Methods asociated with the bootstrap
+
+        . show
+        . hide
+        . toggle
+        . dispose
+        . handleUpdate
+
+        Events associated with the bootstrap
+
+        . show.bs.modal
+        . shown.bs.modal
+        . hide.bs.modal
+        . hidden.bs.modal
+        . hidePrevented.bs.modal
+         
+
+    -->
+
+    <div class="container">
+        <h2 class="py-3 text-center">Bootstrap Modal</h2>
+        <div class="row py-3 justify-content-center">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true" data-bs-backdrop="static">
+                <!-- data-bs-backdrop = actually will help us to close the modal box with button or 
+                        close button only not on clicking the screns area-->
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <!-- Modal dialog centered will align the modal at the center of the screen -->
+                    <!-- modal-dialog-scrollable will apply the scrolling inside the modal dialog box-->
+                    <div class="modal-content">
+                        <div class="modal-header bg-warning">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-danger">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur saepe quae et autem eos
+                            vero temporibus porro perspiciatis, ipsum ut excepturi vel, fugit, recusandae quaerat ex.
+                            Sed, totam. Eos nisi voluptatibus maxime cum? Cupiditate, amet suscipit ipsum voluptatum
+                            doloremque quas!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, cum repellendus voluptates
+                            qui voluptate quaerat repellat non blanditiis! Quam adipisci tempore laborum iure assumenda,
+                            architecto magni aliquid nobis delectus voluptatum!
+                            Earum cum in est rem sequi molestiae delectus, doloremque praesentium sunt rerum expedita
+                            quam dolorem exercitationem iusto amet excepturi natus quas deleniti distinctio cupiditate
+                            voluptatem? Sit delectus porro dolorum possimus?
+                            Culpa id delectus doloribus quaerat, quibusdam quae, quasi placeat sint non molestias
+                            tempore illum ullam cupiditate reprehenderit fugiat pariatur vel distinctio necessitatibus
+                            incidunt, deserunt esse doloremque eaque ea ipsa. Inventore!
+                            In veritatis deleniti placeat molestias suscipit esse quae quo perferendis nostrum quam
+                            dolorem tempore aspernatur eius saepe, repellat id velit autem eveniet nobis corrupti porro
+                            voluptatem illum quaerat. Iusto, ullam.
+                            Voluptatem neque natus eligendi consectetur nihil doloremque repellat eum? Unde, modi. Quia
+                            ipsum doloribus quos distinctio debitis eligendi, quam, esse aut a pariatur incidunt libero
+                            veniam officiis eum quas porro?
+                            Aliquam autem quis, magnam, rem asperiores eligendi perspiciatis ea fuga praesentium commodi
+                            odio beatae neque natus minima. Doloremque dicta aperiam facere! Nobis ipsa tempore, est
+                            debitis quasi quaerat adipisci! Vitae.
+                            Autem voluptas similique facilis quae commodi? Quae, reiciendis quo? Voluptatibus velit
+                            aperiam maiores fugiat possimus quasi facere pariatur distinctio, expedita quidem.
+                            Asperiores ab amet enim obcaecati omnis consequuntur neque eligendi?
+                            Recusandae provident temporibus iusto ea illum qui nostrum distinctio ipsum voluptatem
+                            aspernatur, saepe doloremque! Natus labore ratione, laboriosam itaque optio distinctio
+                            eveniet recusandae soluta quas, esse illum autem beatae doloremque.
+                            Tempore laudantium a officia quis porro, rerum excepturi iste quo recusandae totam eum ab
+                            eligendi facilis quaerat modi nemo animi cumque. Eius beatae ad, fugiat ab eum voluptatum
+                            impedit distinctio!
+                            Pariatur, error suscipit, fuga culpa dolore asperiores ad ut voluptates mollitia excepturi
+                            similique accusantium debitis quos in. Fugit, minima doloremque porro eum commodi laboriosam
+                            debitis quos sit. Vero, facilis odit.
+                            Corrupti sequi dolorem, ratione, pariatur est blanditiis natus a, quibusdam nulla amet vero
+                            aliquid doloribus quo expedita velit sint officia voluptas alias qui itaque sunt! Explicabo
+                            veniam cupiditate qui dolor.
+                            Modi ducimus maiores tempora culpa laudantium voluptatibus voluptas cupiditate reiciendis
+                            commodi adipisci atque, veritatis laborum blanditiis sit, dolorum labore nihil magni
+                            incidunt? Adipisci beatae omnis expedita quas sunt sint praesentium!
+                            Quas a, rem, tempora, atque debitis culpa aliquam natus soluta quasi et fuga accusantium
+                            illum quisquam cum maxime nulla fugit obcaecati veniam modi at. Libero perspiciatis vitae
+                            iure cupiditate veniam!
+                            Consequatur a repellat modi. Voluptas non, molestiae debitis quisquam suscipit, alias, illo
+                            laudantium excepturi sunt officiis minima incidunt consequatur! Rerum sit eligendi expedita
+                            consequuntur voluptatibus exercitationem est rem dignissimos ullam.
+                            Officiis dolore necessitatibus fugiat consectetur! Veritatis aut dicta nisi minus hic
+                            deleniti sunt et, alias error neque exercitationem consequuntur quidem sint corporis quas
+                            aperiam? Quod porro deleniti esse eaque itaque?
+                            Minima praesentium quae enim laboriosam doloremque neque! Est, nesciunt ullam! Eos nesciunt
+                            nisi, dolorem laborum mollitia fugit quos totam suscipit provident sapiente deleniti atque.
+                            Molestias rem dignissimos dolor cum vel?
+                            Obcaecati cupiditate placeat dolorum dolor explicabo in inventore blanditiis voluptates
+                            quisquam consequatur accusamus reprehenderit officiis fugiat sequi sed aliquam repudiandae
+                            quibusdam labore repellendus doloribus maxime, tenetur ipsum rem. Eveniet, sunt.
+                            Hic enim harum eum nobis ut veritatis ratione dolorem, tenetur vero vel sunt. Quasi
+                            distinctio deserunt sit ea vel pariatur tempore et, quidem ut veniam illum suscipit
+                            laboriosam esse! Quo.
+                            Voluptate sint id quas, illo nesciunt qui unde vitae omnis harum perferendis. Hic quaerat
+                            quisquam dolores nobis beatae aliquid ad cupiditate est neque, asperiores veniam magnam,
+                            excepturi quas laudantium! Minima?
+                            Hic, quae. Nostrum blanditiis eum velit veritatis excepturi, quibusdam fugiat qui at itaque
+                            ut nihil iure? Exercitationem ad libero inventore vel doloremque ducimus, amet esse ipsa,
+                            fugiat delectus unde placeat.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

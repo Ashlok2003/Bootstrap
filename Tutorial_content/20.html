@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .container {
+            border: 2px solid black;
+        }
+
+        .row {
+            border: 2px solid red;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+        Pagination & Breadcrumb Classes    
+
+        Page switching windows basically appears when there are multiple pages
+
+        Bootstrap 5 Break-points
+
+        Extra extra Large   :   >= 1400px  xxl &&  Container-width: 1320px :) rest are same
+        Extra Large         :   >= 1200px
+        Large               :   >= 992px
+        Medium              :   >= 768px
+        Small               :   >= 576px
+        Extra Small         :   <  576px
+
+        gutter padding classes
+
+        .gx-* [0-5] as per the rem convention
+        .gy-* [0-5] as per the rem convention
+        .g-* give form both axial point of view
+
+        .g-{xxl,xl,lg,md,xm}-* [0 - 5] as per the rem convention
+
+
+        line-height-classes
+
+        .lh-1
+        .lh-sm
+        .lh-base
+        .lh-lg
+
+        
+    -->
+
+    <nav>
+        <ul class="pagination pagination-lg justify-content-center">
+            <li class="page-item"><a href="" class="page-link active">1</a></li>
+            <li class="page-item"><a href="" class="page-link disabled">2</a></li>
+            <li class="page-item"><a href="" class="page-link">3</a></li>
+            <li class="page-item"><a href="" class="page-link">4</a></li>
+            <li class="page-item"><a href="" class="page-link">5</a></li>
+        </ul>
+    </nav>
+    <br><br>
+
+    <nav>
+        <ol class="breadcrumb breadcrumb">
+            <li class="breadcrumb-item"><a href="">Home</a></li>
+            <li class="breadcrumb-item"><a href="">About Us</a></li>
+            <li class="breadcrumb-item"><a href="">Contact Us</a></li>
+            <li class="breadcrumb-item"><a href="">Inform Us</a></li>
+            <li class="breadcrumb-item"><a href="">Party With Us</a></li>
+        </ol>
+    </nav>
+
+    <!-- Bootstrap CDN  Integration  -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
