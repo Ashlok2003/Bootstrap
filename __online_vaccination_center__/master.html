@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+        integrity="sha512-6qkvBbDyl5TDJtNJiC8foyEVuB6gxMBkrKy67XpqnIDxyvLLPJzmTjAj1dRJfNdmXWqD10VbJoeN4pOQqDwvRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"
+        integrity="sha512-2hIlk2fL+NNHkULe9gGdma/T5vSYk80U5tvAFSy3dGEl8XD4h2i6frQvHv5B+bm/Itmi8nJ6krAcj5FWFcBGig=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            font-size: 1.5vh;
+        }
+
+        .container-fluid {
+            margin: 20px 30px;
+        }
+
+        .container-fluid hr {
+            border: 3px solid crimson;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+
+        .header .left-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 20px;
+            font-weight: 700;
+
+        }
+
+        .header .left-header img {
+            height: 70px;
+            width: 50px;
+            margin-left: 30px;
+        }
+
+        .header .left-header .user {
+            height: 90px;
+            width: 90px;
+            margin-left: 30px;
+        }
+
+        .header .right-header {
+            margin-right: 130vh;
+        }
+
+        .left-header li:hover {
+            color: #fff;
+            font-weight: 700;
+            background-color: crimson;
+        }
+
+        .col-md-8 img {
+            height: 50%;
+            width: 50%;
+        }
+
+        .card-body {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+
+        .card-body li {
+            padding-top: 20px;
+        }
+
+        .scrollable-container {
+            max-height: 70vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #cccccc #f0f0f0;
+
+        }
+
+        /* Define scrollbar styles for Firefox */
+        .scrollable-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .scrollable-container::-webkit-scrollbar-thumb {
+            background-color: #cccccc;
+        }
+
+        .scrollable-container::-webkit-scrollbar-track {
+            background-color: #f0f0f0;
+        }
+
+        /* .col-md-2 {
+            padding: 0 30px;
+        }
+        */
+        .col-md-8 {
+            margin-left: 200px;
+        }
+
+        .faq img {
+            height: 550px;
+            width: auto;
+
+        }
+
+        .tabular button {
+            border-radius: 0px;
+            height: 50px;
+            width: 130px;
+            text-align: center;
+        }
+
+        .tab button {
+
+            background-color: #90caf8;
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #103f65;
+        }
+
+        .tab button.active {
+            background-color: #fff;
+        }
+
+        .faq {
+            height: auto;
+            width: 100%;
+            margin-right: 290px;
+            margin-top: -250px;
+        }
+
+        .faq .tabcontent {
+            height: 42vh;
+            overflow: hidden;
+        }
+
+        .inner-card img {
+            height: 20vh;
+            width: 10vw;
+        }
+
+        .col-md-1 img {
+            height: 80vh;
+            width: 22vw;
+        }
+
+        .col-md-3 {
+            margin-right: 130px;
+        }
+
+        .covidimage {
+            /* height: 400px;
+            width: 500px; */
+            margin-top: -70px;
+            margin-bottom: 90px;
+        }
+
+        .body {
+            margin-top: -300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <div class="right-header">
+                <h2 class="display-5 fw-bolder text-danger"><i class="fa-solid fa-hospital"></i> Medicare</h2>
+            </div>
+            <div class="left-header">
+                <ul class="list-group list-group-horizontal list-group-flush ">
+                    <li class="list-group-item">Home</li>
+                    <li class="list-group-item">Covid Tracker</li>
+                    <li class="list-group-item">Donate Us</li>
+                </ul>
+                <img class="ms-5"src="./emblem.png" alt="">
+                <img class='user' src="https://static.thenounproject.com/png/5034901-200.png" alt="">
+            </div>
+        </div>
+        <hr>
+
+        <div class="container-fluid d-flex align-items-start">
+            <div class="row py-2">
+
+                <div class="d-flex align-item-center justify-content-center">
+                    <div class="covidimage">
+                        <img src="./coronavirus-6600290_1280-removebg-preview.png" alt="">
+                    </div>
+                    <div class="d-flex align-item-center justify-content-between">
+                        <div class="d-flex align-items-center flex-column">
+                            <div class="title">
+                                <h3 class="fw-bolder">Total Cases</h3>
+                            </div>
+                            <div class="values fw-bolder display-5">
+                                9000+
+                            </div>
+
+                        </div>
+                        <div class="d-flex align-items-center flex-column px-5">
+                            <div class="title">
+                                <h3 class="fw-bolder text-success">Recovered</h3>
+                            </div>
+                            <div class="values fw-bolder display-5 text-success">
+                                3000+
+                            </div>
+
+                        </div>
+                        <div class="d-flex align-items-center flex-column">
+                            <div class="title">
+                                <h3 class="fw-bolder text-danger">Deaths</h3>
+                            </div>
+                            <div class="values fw-bolder display-5 text-danger">
+                                2000+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="body container-fluid d-flex align-items-center justify-content-md-between py-5">
+
+            <div class="row">
+                <div class="vaccination container-fluid d-flex align-items-center justify-content-between">
+
+                    <div class="row">
+                        <!-- left Most section -->
+                        <div class="col-md-1 my-5">
+                            <img src="./side.png" alt="">
+                        </div>
+
+                        <!-- right Most section -->
+                        <div class="col-md-6 py-5 me-4 mx-auto">
+                            <div
+                                class="card-body  text-center fw-bolder d-flex align-items-center justify-content-center flex-column">
+                                <h5 class="card-title fw-bolder">Please Select The Vaccination Type</h5>
+                                <ul class="list-group list-group-horizontal list-group-flush">
+                                    <li class="list-group-item"><button class="btn btn-primary fw-bolder vaccinetypes"
+                                            value="COVAXIN">COVAXIN</button></li>
+                                    <li class="list-group-item"><button class="btn btn-secondary fw-bolder vaccinetypes"
+                                            value="COVISHILED">COVISHILED</button>
+                                    </li>
+                                    <li class="list-group-item"><button class="btn btn-danger fw-bolder vaccinetypes"
+                                            value="SPUTNIK">SPUTNIK</button></li>
+                                    <li class="list-group-item"><button class="btn btn-warning fw-bolder vaccinetypes"
+                                            value="SWINE-FLU">SWINE-FLU</button>
+                                    </li>
+                                    <li class="list-group-item"><button class="btn btn-success fw-bolder vaccinetypes"
+                                            value="TETANIS">TETANIS</button></li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title mx-auto fw-bolder text-center">
+                                    List
+                                    of Available Hospitals</h5>
+                            </div>
+                            <div class="container scrollable-container">
+                                <div class="row" id="content">
+
+                                    <div class="card-body">
+                                        <div
+                                            class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                            <div class="order-md-2 text-center">
+                                                <img src="./dcotrps.jpg" alt="">
+                                            </div>
+                                            <div class="mx-auto text-md-start text-center order-md-1">
+                                                <h5 class="card-title fw-bolder">ESIS MEDICAL HOSPITAL</h5>
+                                                <p class="card-text fw-light">Include plenty of fruits and
+                                                    vegetables
+                                                    for essential vitamins and
+                                                    minerals. Choose lean sources of protein like chicken, fish,
+                                                    beans,
+                                                    and tofu. Opt for whole grains
+                                                    over refined ones to provide lasting energy. Don't forget
+                                                    healthy
+                                                    fats from sources like avocados,
+                                                    nuts, and olive oil. This balanced approach ensures you get the
+                                                    nutrients your body needs for
+                                                    optimal functioning.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="list-group list-group-horizontal list-group-flush">
+                                        <li class="list-group-item"><button class="btn btn-primary"
+                                                value="01-01-2023,ESIS"><i class="fa-solid fa-calendar-days"></i>
+                                                01-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-danger"
+                                                value="02-01-2023,ESIS"><i class="fa-solid fa-calendar-days"></i>
+                                                02-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-success"
+                                                value="03-01-2023,ESIS"><i class="fa-solid fa-calendar-days"></i>
+                                                03-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"
+                                                value="04-01-2023,ESIS"><i class="fa-solid fa-calendar-days"></i>
+                                                04-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"
+                                                value="05-01-2023,ESIS"><i class="fa-solid fa-calendar-days"></i>
+                                                05-01-2023</button></li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="row" id="content">
+
+                                    <div class="card-body">
+                                        <div
+                                            class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                            <div class="order-md-2 text-center">
+                                                <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                            </div>
+                                            <div class="mx-auto text-md-start text-center order-md-1">
+                                                <h5 class="card-title fw-bolder">KOKILABEN MEDICAL HOSPITAL</h5>
+                                                <p class="card-text fw-light">Include plenty of fruits and
+                                                    vegetables
+                                                    for essential vitamins and
+                                                    minerals. Choose lean sources of protein like chicken, fish,
+                                                    beans,
+                                                    and tofu. Opt for whole grains
+                                                    over refined ones to provide lasting energy. Don't forget
+                                                    healthy
+                                                    fats from sources like avocados,
+                                                    nuts, and olive oil. This balanced approach ensures you get the
+                                                    nutrients your body needs for
+                                                    optimal functioning.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="list-group list-group-horizontal list-group-flush">
+                                        <li class="list-group-item"><button class="btn btn-primary"
+                                                value="01-01-2023,KOKILABEN"><i class="fa-solid fa-calendar-days"></i>
+                                                01-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-danger"
+                                                value="02-01-2023,KOKILABEN"><i class="fa-solid fa-calendar-days"></i>
+                                                02-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-success"
+                                                value="03-01-2023,KOKILABEN"><i class="fa-solid fa-calendar-days"></i>
+                                                03-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"
+                                                value="04-01-2023,KOKILABEN"><i class="fa-solid fa-calendar-days"></i>
+                                                04-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"
+                                                value="05-01-2023,KOKILABEN"><i class="fa-solid fa-calendar-days"></i>
+                                                05-01-2023</button></li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="row" id="content">
+
+                                    <div class="card-body">
+                                        <div
+                                            class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                            <div class="order-md-2 text-center">
+                                                <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                            </div>
+                                            <div class="mx-auto text-md-start text-center order-md-1">
+                                                <h5 class="card-title fw-bolder">TATA MEDICAL HOSPITAL</h5>
+                                                <p class="card-text fw-light">Include plenty of fruits and
+                                                    vegetables
+                                                    for essential vitamins and
+                                                    minerals. Choose lean sources of protein like chicken, fish,
+                                                    beans,
+                                                    and tofu. Opt for whole grains
+                                                    over refined ones to provide lasting energy. Don't forget
+                                                    healthy
+                                                    fats from sources like avocados,
+                                                    nuts, and olive oil. This balanced approach ensures you get the
+                                                    nutrients your body needs for
+                                                    optimal functioning.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="list-group list-group-horizontal list-group-flush">
+                                        <li class="list-group-item"><button class="btn btn-primary"
+                                                value="01-01-2023,TATA"><i class="fa-solid fa-calendar-days"></i>
+                                                01-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-danger"
+                                                value="02-01-2023,TATA"><i class="fa-solid fa-calendar-days"></i>
+                                                02-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-success"
+                                                value="03-01-2023,TATA"><i class="fa-solid fa-calendar-days"></i>
+                                                03-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"
+                                                value="04-01-2023,TATA"><i class="fa-solid fa-calendar-days"></i>
+                                                04-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"
+                                                value="05-01-2023,TATA"><i class="fa-solid fa-calendar-days"></i>
+                                                05-01-2023</button></li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="row" id="content">
+
+                                    <div class="card-body">
+                                        <div
+                                            class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                            <div class="order-md-2 text-center">
+                                                <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                            </div>
+                                            <div class="mx-auto text-md-start text-center order-md-1">
+                                                <h5 class="card-title fw-bolder">SANJEEVNI MEDICAL HOSPITAL</h5>
+                                                <p class="card-text fw-light">Include plenty of fruits and
+                                                    vegetables
+                                                    for essential vitamins and
+                                                    minerals. Choose lean sources of protein like chicken, fish,
+                                                    beans,
+                                                    and tofu. Opt for whole grains
+                                                    over refined ones to provide lasting energy. Don't forget
+                                                    healthy
+                                                    fats from sources like avocados,
+                                                    nuts, and olive oil. This balanced approach ensures you get the
+                                                    nutrients your body needs for
+                                                    optimal functioning.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="list-group list-group-horizontal list-group-flush">
+                                        <li class="list-group-item"><button class="btn btn-primary"
+                                                value="01-01-2023,SANJEEVNI"><i class="fa-solid fa-calendar-days"></i>
+                                                01-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-danger"
+                                                value="02-01-2023,SANJEEVNI"><i class="fa-solid fa-calendar-days"></i>
+                                                02-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-success"
+                                                value="03-01-2023,SANJEEVNI"><i class="fa-solid fa-calendar-days"></i>
+                                                03-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"
+                                                value="04-01-2023,SANJEEVNI"><i class="fa-solid fa-calendar-days"></i>
+                                                04-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"
+                                                value="05-01-2023,SANJEEVNI"><i class="fa-solid fa-calendar-days"></i>
+                                                05-01-2023</button></li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="row" id="content">
+
+                                    <div class="card-body">
+                                        <div
+                                            class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                            <div class="order-md-2 text-center">
+                                                <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                            </div>
+                                            <div class="mx-auto text-md-start text-center order-md-1">
+                                                <h5 class="card-title fw-bolder">ESIS MEDICAL HOSPITAL</h5>
+                                                <p class="card-text fw-light">Include plenty of fruits and
+                                                    vegetables
+                                                    for essential vitamins and
+                                                    minerals. Choose lean sources of protein like chicken, fish,
+                                                    beans,
+                                                    and tofu. Opt for whole grains
+                                                    over refined ones to provide lasting energy. Don't forget
+                                                    healthy
+                                                    fats from sources like avocados,
+                                                    nuts, and olive oil. This balanced approach ensures you get the
+                                                    nutrients your body needs for
+                                                    optimal functioning.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="list-group list-group-horizontal list-group-flush">
+                                        <li class="list-group-item"><button class="btn btn-primary"><i
+                                                    class="fa-solid fa-calendar-days" value="01-01-2023,"></i>
+                                                01-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-danger"><i
+                                                    class="fa-solid fa-calendar-days" value="02-01-2023,"></i>
+                                                02-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-success"><i
+                                                    class="fa-solid fa-calendar-days" value="03-01-2023,"></i>
+                                                03-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"><i
+                                                    class="fa-solid fa-calendar-days" value="04-01-2023,"></i>
+                                                04-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"><i
+                                                    class="fa-solid fa-calendar-days" value="05-01-2023,"></i>
+                                                05-01-2023</button></li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="row" id="content">
+
+                                    <div class="card-body">
+                                        <div
+                                            class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                            <div class="order-md-2 text-center">
+                                                <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                            </div>
+                                            <div class="mx-auto text-md-start text-center order-md-1">
+                                                <h5 class="card-title fw-bolder">ESIS MEDICAL HOSPITAL</h5>
+                                                <p class="card-text fw-light">Include plenty of fruits and
+                                                    vegetables
+                                                    for essential vitamins and
+                                                    minerals. Choose lean sources of protein like chicken, fish,
+                                                    beans,
+                                                    and tofu. Opt for whole grains
+                                                    over refined ones to provide lasting energy. Don't forget
+                                                    healthy
+                                                    fats from sources like avocados,
+                                                    nuts, and olive oil. This balanced approach ensures you get the
+                                                    nutrients your body needs for
+                                                    optimal functioning.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="list-group list-group-horizontal list-group-flush">
+                                        <li class="list-group-item"><button class="btn btn-primary"><i
+                                                    class="fa-solid fa-calendar-days" value="01-01-2023,"></i>
+                                                01-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-danger"><i
+                                                    class="fa-solid fa-calendar-days" value="02-01-2023,"></i>
+                                                02-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-success"><i
+                                                    class="fa-solid fa-calendar-days" value="03-01-2023,"></i>
+                                                03-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"><i
+                                                    class="fa-solid fa-calendar-days" value="04-01-2023,"></i>
+                                                04-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"><i
+                                                    class="fa-solid fa-calendar-days" value="05-01-2023,"></i>
+                                                05-01-2023</button></li>
+                                    </ul>
+
+
+                                </div>
+                                <div class="row" id="content">
+
+                                    <div class="card-body">
+                                        <div
+                                            class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                            <div class="order-md-2 text-center">
+                                                <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                            </div>
+                                            <div class="mx-auto text-md-start text-center order-md-1">
+                                                <h5 class="card-title fw-bolder">ESIS MEDICAL HOSPITAL</h5>
+                                                <p class="card-text fw-light">Include plenty of fruits and
+                                                    vegetables
+                                                    for essential vitamins and
+                                                    minerals. Choose lean sources of protein like chicken, fish,
+                                                    beans,
+                                                    and tofu. Opt for whole grains
+                                                    over refined ones to provide lasting energy. Don't forget
+                                                    healthy
+                                                    fats from sources like avocados,
+                                                    nuts, and olive oil. This balanced approach ensures you get the
+                                                    nutrients your body needs for
+                                                    optimal functioning.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <ul class="list-group list-group-horizontal list-group-flush">
+                                        <li class="list-group-item"><button class="btn btn-primary"><i
+                                                    class="fa-solid fa-calendar-days" value="01-01-2023,"></i>
+                                                01-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-danger"><i
+                                                    class="fa-solid fa-calendar-days" value="02-01-2023,"></i>
+                                                02-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-success"><i
+                                                    class="fa-solid fa-calendar-days" value="03-01-2023,"></i>
+                                                03-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"><i
+                                                    class="fa-solid fa-calendar-days" value="04-01-2023,"></i>
+                                                04-01-2023</button></li>
+                                        <li class="list-group-item"><button class="btn btn-warning"><i
+                                                    class="fa-solid fa-calendar-days" value="05-01-2023,"></i>
+                                                05-01-2023</button></li>
+                                    </ul>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="faq container">
+                                <div>
+                                    <img src="./stay-strong-stop-corona-virus-poster-design_66757-412-removebg-preview.png"
+                                        alt="">
+                                </div>
+                                <!-- faqs section starts here -->
+                                <div class="tabular px-5">
+                                    <div class="tab">
+                                        <button class="tablinks" data-tab="tab1">STEP 1</button>
+                                        <button class="tablinks" data-tab="tab2">STEP 2</button>
+                                        <button class="tablinks" data-tab="tab3">STEP 3</button>
+                                        <button class="tablinks" data-tab="tab4">STEP 4</button>
+                                        <button class="tablinks" data-tab="tab5">STEP 5</button>
+                                    </div>
+                                    <div class="tabcontent py-5" id="tab1">
+                                        <h2 class="display-5 fw-bolder">Balanced Diet</h2>
+                                        <p class="lead"> A balanced diet is crucial for overall health. Focus on
+                                            incorporating a variety
+                                            of
+                                            food groups into your meals. Include plenty of fruits and vegetables for
+                                            essential vitamins
+                                            and
+                                            minerals. Choose lean sources of protein like chicken, fish, beans, and
+                                            tofu. Opt for whole
+                                            grains
+                                            over refined ones to provide lasting energy. Don't forget healthy fats
+                                            from
+                                            sources like
+                                            avocados,
+                                            nuts, and olive oil. This balanced approach ensures you get the
+                                            nutrients
+                                            your body needs
+                                            for
+                                            optimal functioning.
+                                            A balanced diet is crucial for overall health. Focus on incorporating a
+                                            variety of
+                                            food groups into your meals. Include plenty of fruits and vegetables for
+                                            essential vitamins
+                                            and
+                                            minerals. Choose lean sources of protein like chicken, fish, beans, and
+                                            tofu. Opt for whole
+                                            grains
+                                            over refined ones to provide lasting energy. Don't forget healthy fats
+                                            from
+                                            sources like
+                                            avocados,
+                                            nuts, and olive oil. This balanced approach ensures you get the
+                                            nutrients
+                                            your body needs
+                                            for
+                                            optimal functioning.
+                                            A balanced diet is crucial for overall health. Focus on incorporating a
+                                            variety of
+                                            food groups into your meals. Include plenty of fruits and vegetables for
+                                            essential vitamins
+                                            and
+                                            minerals. Choose lean sources of protein like chicken, fish, beans, and
+                                            tofu. Opt for whole
+                                            grains
+                                            over refined ones to provide lasting energy. Don't forget healthy fats
+                                            from
+                                            sources like
+                                            avocados,
+                                            nuts, and olive oil. This balanced approach ensures you get the
+                                            nutrients
+                                            your body needs
+                                            for
+                                            optimal functioning.
+                                            A balanced diet is crucial for overall health. Focus on incorporating a
+                                            variety of
+                                            food groups into your meals. Include plenty of fruits and vegetables for
+                                            essential vitamins
+                                            and
+                                            minerals. Choose lean sources of protein like chicken, fish, beans, and
+                                            tofu. Opt for whole
+                                            grains
+                                            over refined ones to provide lasting energy. Don't forget healthy fats
+                                            from
+                                            sources like
+                                            avocados,
+                                            nuts, and olive oil. This balanced approach ensures you get the
+                                            nutrients
+                                            your body needs
+                                            for
+                                            optimal functioning.</p>
+                                    </div>
+                                    <div class="tabcontent py-5" id="tab2">
+                                        <h2 class="display-5 fw-bolder">Stay Hydrated</h2>
+                                        <p class="lead"> Water is essential for various bodily functions, including
+                                            digestion,
+                                            circulation, and
+                                            temperature regulation. Aim to drink at least eight glasses (about 2
+                                            liters)
+                                            of water per
+                                            day.
+                                            Adjust this amount based on your activity level and climate. Proper
+                                            hydration helps maintain
+                                            healthy
+                                            skin, aids in detoxification, and keeps your body running smoothly.
+                                            Water is essential for various bodily functions, including digestion,
+                                            circulation, and
+                                            temperature regulation. Aim to drink at least eight glasses (about 2
+                                            liters)
+                                            of water per
+                                            day.
+                                            Adjust this amount based on your activity level and climate. Proper
+                                            hydration helps maintain
+                                            healthy
+                                            skin, aids in detoxification, and keeps your body running smoothly.
+                                            Water is essential for various bodily functions, including digestion,
+                                            circulation, and
+                                            temperature regulation. Aim to drink at least eight glasses (about 2
+                                            liters)
+                                            of water per
+                                            day.
+                                            Adjust this amount based on your activity level and climate. Proper
+                                            hydration helps maintain
+                                            healthy
+                                            skin, aids in detoxification, and keeps your body running smoothly.
+                                            Water is essential for various bodily functions, including digestion,
+                                            circulation, and
+                                            temperature regulation. Aim to drink at least eight glasses (about 2
+                                            liters)
+                                            of water per
+                                            day.
+                                            Adjust this amount based on your activity level and climate. Proper
+                                            hydration helps maintain
+                                            healthy
+                                            skin, aids in detoxification, and keeps your body running smoothly.
+                                            Water is essential for various bodily functions, including digestion,
+                                            circulation, and
+                                            temperature regulation. Aim to drink at least eight glasses (about 2
+                                            liters)
+                                            of water per
+                                            day.
+                                            Adjust this amount based on your activity level and climate. Proper
+                                            hydration helps maintain
+                                            healthy
+                                            skin, aids in detoxification, and keeps your body running smoothly.</p>
+                                    </div>
+                                    <div class="tabcontent py-5" id="tab3">
+                                        <h2 class="display-5 fw-bolder">Regular Exercise</h2>
+                                        <p class="lead">Regular physical activity is a cornerstone of good health.
+                                            Aim
+                                            for a mix of
+                                            aerobic
+                                            exercises (like jogging, swimming, or dancing) and strength training
+                                            (using
+                                            weights or
+                                            resistance
+                                            bands) to keep your body strong and fit. Exercise not only helps you
+                                            maintain a healthy
+                                            weight but
+                                            also improves cardiovascular health, boosts mood, and reduces the risk
+                                            of
+                                            chronic diseases
+                                            like
+                                            diabetes and heart disease.
+                                            Regular physical activity is a cornerstone of good health. Aim for a mix
+                                            of
+                                            aerobic
+                                            exercises (like jogging, swimming, or dancing) and strength training
+                                            (using
+                                            weights or
+                                            resistance
+                                            bands) to keep your body strong and fit. Exercise not only helps you
+                                            maintain a healthy
+                                            weight but
+                                            also improves cardiovascular health, boosts mood, and reduces the risk
+                                            of
+                                            chronic diseases
+                                            like
+                                            diabetes and heart disease.
+                                            Regular physical activity is a cornerstone of good health. Aim for a mix
+                                            of
+                                            aerobic
+                                            exercises (like jogging, swimming, or dancing) and strength training
+                                            (using
+                                            weights or
+                                            resistance
+                                            bands) to keep your body strong and fit. Exercise not only helps you
+                                            maintain a healthy
+                                            weight but
+                                            also improves cardiovascular health, boosts mood, and reduces the risk
+                                            of
+                                            chronic diseases
+                                            like
+                                            diabetes and heart disease.
+                                            Regular physical activity is a cornerstone of good health. Aim for a mix
+                                            of
+                                            aerobic
+                                            exercises (like jogging, swimming, or dancing) and strength training
+                                            (using
+                                            weights or
+                                            resistance
+                                            bands) to keep your body strong and fit. Exercise not only helps you
+                                            maintain a healthy
+                                            weight but
+                                            also improves cardiovascular health, boosts mood, and reduces the risk
+                                            of
+                                            chronic diseases
+                                            like
+                                            diabetes and heart disease.</p>
+
+                                    </div>
+                                    <div class="tabcontent py-5" id="tab4">
+                                        <h2 class="display-5 fw-bolder">Adequate Sleep</h2>
+                                        <p class="lead"> Quality sleep is essential for overall well-being. Aim for
+                                            7-9
+                                            hours of sleep
+                                            each
+                                            night, as individual needs can vary. A good night's sleep supports
+                                            physical
+                                            recovery, mental
+                                            clarity, and emotional balance. Establish a regular sleep schedule,
+                                            create a
+                                            comfortable
+                                            sleep
+                                            environment, and avoid screens and caffeine close to bedtime to improve
+                                            your
+                                            sleep quality.
+                                            Quality sleep is essential for overall well-being. Aim for 7-9 hours of
+                                            sleep each
+                                            night, as individual needs can vary. A good night's sleep supports
+                                            physical
+                                            recovery, mental
+                                            clarity, and emotional balance. Establish a regular sleep schedule,
+                                            create a
+                                            comfortable
+                                            sleep
+                                            environment, and avoid screens and caffeine close to bedtime to improve
+                                            your
+                                            sleep quality.
+                                            Quality sleep is essential for overall well-being. Aim for 7-9 hours of
+                                            sleep each
+                                            night, as individual needs can vary. A good night's sleep supports
+                                            physical
+                                            recovery, mental
+                                            clarity, and emotional balance. Establish a regular sleep schedule,
+                                            create a
+                                            comfortable
+                                            sleep
+                                            environment, and avoid screens and caffeine close to bedtime to improve
+                                            your
+                                            sleep quality.
+                                            Quality sleep is essential for overall well-being. Aim for 7-9 hours of
+                                            sleep each
+                                            night, as individual needs can vary. A good night's sleep supports
+                                            physical
+                                            recovery, mental
+                                            clarity, and emotional balance. Establish a regular sleep schedule,
+                                            create a
+                                            comfortable
+                                            sleep
+                                            environment, and avoid screens and caffeine close to bedtime to improve
+                                            your
+                                            sleep quality.
+                                            Quality sleep is essential for overall well-being. Aim for 7-9 hours of
+                                            sleep each
+                                            night, as individual needs can vary. A good night's sleep supports
+                                            physical
+                                            recovery, mental
+                                            clarity, and emotional balance. Establish a regular sleep schedule,
+                                            create a
+                                            comfortable
+                                            sleep
+                                            environment, and avoid screens and caffeine close to bedtime to improve
+                                            your
+                                            sleep quality.
+                                        </p>
+
+                                    </div>
+
+                                    <div class="tabcontent py-5" id="tab5">
+                                        <h2 class="display-5 fw-bolder">Stress Management</h2>
+                                        <p class="lead">Chronic stress can have a significant impact on your health.
+                                            Practice
+                                            stress-reduction techniques like meditation, deep breathing, or yoga to
+                                            manage stress
+                                            effectively.
+                                            These practices help lower cortisol levels, reduce anxiety, and improve
+                                            overall mental
+                                            health.
+                                            Additionally, finding hobbies or activities you enjoy can also help
+                                            alleviate stress and
+                                            promote a
+                                            sense of well-being.
+                                            Chronic stress can have a significant impact on your health. Practice
+                                            stress-reduction techniques like meditation, deep breathing, or yoga to
+                                            manage stress
+                                            effectively.
+                                            These practices help lower cortisol levels, reduce anxiety, and improve
+                                            overall mental
+                                            health.
+                                            Additionally, finding hobbies or activities you enjoy can also help
+                                            alleviate stress and
+                                            promote a
+                                            sense of well-being.
+                                            Chronic stress can have a significant impact on your health. Practice
+                                            stress-reduction techniques like meditation, deep breathing, or yoga to
+                                            manage stress
+                                            effectively.
+                                            These practices help lower cortisol levels, reduce anxiety, and improve
+                                            overall mental
+                                            health.
+                                            Additionally, finding hobbies or activities you enjoy can also help
+                                            alleviate stress and
+                                            promote a
+                                            sense of well-being.
+                                            Chronic stress can have a significant impact on your health. Practice
+                                            stress-reduction techniques like meditation, deep breathing, or yoga to
+                                            manage stress
+                                            effectively.
+                                            These practices help lower cortisol levels, reduce anxiety, and improve
+                                            overall mental
+                                            health.
+                                            Additionally, finding hobbies or activities you enjoy can also help
+                                            alleviate stress and
+                                            promote a
+                                            sense of well-being.
+                                            Chronic stress can have a significant impact on your health. Practice
+                                            stress-reduction techniques like meditation, deep breathing, or yoga to
+                                            manage stress
+                                            effectively.
+                                            These practices help lower cortisol levels, reduce anxiety, and improve
+                                            overall mental
+                                            health.
+                                            Additionally, finding hobbies or activities you enjoy can also help
+                                            alleviate stress and
+                                            promote a
+                                            sense of well-being.</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Covid Tracker starts section here-->
+    <!-- Covid Tracker ends section here-->
+
+
+    <!-- Faqs and hospital image on side-->
+
+    <!-- Faqs and hopital image part end here-->
+
+
+    <!-- Footer section starts here-->
+    <footer class="text-center text-lg-start bg-light text-muted py-5">
+        <!-- Section: Social media -->
+        <section class=" text-danger d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="fw-bolder fw-dark">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-danger">
+                            <i class="fas fa-gem me-3 text-danger"></i>Medicare
+                        </h6>
+                        <p>
+                            Medicare Health is one of the largest health solutions companies in Mumbai. They provide a
+                            wide
+                            range of services, including pharmacy services,
+                            health plans, and health and wellness solutions. Medicare Health is committed to helping
+                            people
+                            live healthier lives.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-danger">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Vaccination</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Day Care</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Emergency</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Genral Checkups</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-uppercase">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-danger">
+                            Health Care Tips
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-danger">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> Mumbai, Maharashtra, India</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            chaudharyashlok@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> 7767012860</p>
+                        <p><i class="fas fa-print me-3"></i> 7499535500</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center text-danger p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="https://github.com/Ashlok2003">chaudharyashlok@Junior_Developer</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- Footer section ends here-->
+
+    <!-- Sweet Alert CDN integration -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Bootstrap CDN Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

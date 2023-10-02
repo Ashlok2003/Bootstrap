@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare !</title>
+    <link rel="icon"
+        href="data:image/png;base64,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">
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container-fluid {
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .container-fluid a:hover {
+            background-color: lightgreen;
+        }
+
+        .margin {
+            margin-top: 130px;
+        }
+
+        .btn {
+            height: 60px;
+            width: 240px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .btn:hover {
+            transform: scale(1.4);
+            transition: 0.3s ease-out;
+        }
+
+        .box {
+            font-size: 25px;
+            border: 2px solid black;
+            border-radius: 50px;
+        }
+
+        .card-body {
+            border-radius: 10px;
+        }
+
+        .texting h1 {
+            font-size: 120px !important;
+            line-height: 120px;
+            font-weight: 700;
+            transform: translate(-50%, -50%);
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgBsUjTK1nFthg7Gq2HfVNEIP-ms1BHDrXug&usqp=CAU') 50% 50%;
+            background-size: cover;
+            background-position: center;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            margin-top: 50px;
+            margin-left: 600px;
+        }
+
+        .card-header {
+            background: url(./leaves-transformed-removebg-preview.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container-fluid a {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nav Bar section -->
+    <section>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary px-3">
+            <div class="container-fluid">
+                <h2 class="text-success display-5 fw-bolder ms-auto">Medicare </h2>
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bolder" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Donate Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </section>
+
+    <!-- First Section Display Start here-->
+    <section class="header">
+        <div class="container py-5">
+            <div class="row align-items-center justify-content-around">
+                <div class="col-md-8 order-md-1 margin">
+                    <h1 class="display-1 text-nowrap fw-bolder">Save yourself.</h1>
+                    <h1 class=" display-1  text-nowrap fw-bolder">Save each other.</h1>
+                    <h1 class=" display-3 text-nowrap fw-bolder">Book Your Vaccination Now</h1>
+                </div>
+                <div class="col-md-3 order-md-2 me-3">
+                    <img src="./pngwing.com (2).png" alt="" height="500px" width="500px">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button class="btn btn-success btn-md-lg book">BOOK VACCINATION</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- First Section Display Ends here-->
+
+
+    <!-- Why Choose us Section -->
+    <section>
+        <div class="container py-5">
+            <!-- Qualities  & Key Features-->
+            <div class="row d-flex justify-content-md-between">
+                <div class="col-md-9 px-5">
+                    <h1 class="fw-bold text-nowrap">Welcome To Medicare </h1>
+                    <h3 class="fw-bold text-nowrap mx-5">- Your Trusted Source for Vaccination Information </h3>
+
+                    <p class="lead py-5">
+                        In a world where health and safety have never been more critical, vaccinations stand as a beacon
+                        of hope. They are the key to safeguarding our communities, protecting our loved ones, and
+                        forging a path toward a healthier future.
+                        At Medicare, we are committed to providing you with reliable, up-to-date, and
+                        comprehensive information about vaccines. Our mission is to empower individuals with the
+                        knowledge they need to make informed decisions about their health and the health of those around
+                        them.<br>
+                        Whether you're a concerned parent seeking guidance on childhood immunizations, a traveler
+                        looking for destination-specific vaccine recommendations, or someone eager to stay informed
+                        about the latest vaccine breakthroughs, our website is your go-to resource. We offer a wealth of
+                        articles, resources, and expert insights
+
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="./indian-doctor-removebg-preview.png" alt="" height="400px" width="400px">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Achivement or Features-->
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="fw-bolder text-center text-uppercase">Key Features</h2>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-md-around">
+                <div class="col-md-6">
+                    <img src="./dcotrps.jpg" alt="" height="700px" width="700px">
+                </div>
+                <div class="col-md-6 py-3 justify-content-md-between">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card bg-danger text-white">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Hygiene Environment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional
+                                        content.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Professional Services</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional
+                                        content.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row py-5">
+                        <div class="col-sm-6">
+                            <div class="card text-center">
+                                <div class="card-body bg-secondary text-white">
+                                    <h5 class="card-title">Quality Staff</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional
+                                        content.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card text-center">
+                                <div class="card-body bg-warning text-white ">
+                                    <h5 class="card-title">Fast & Rapid Services</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional
+                                        content.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose us Section ends here -->
+
+
+
+    <!-- Footer section starts Here -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted py-5">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <i class="fas fa-gem me-3"></i>Medicare
+                        </h6>
+                        <p>
+                            Medicare Health is one of the largest health solutions companies in Mumbai. They provide a
+                            wide
+                            range of services, including pharmacy services,
+                            health plans, and health and wellness solutions. Medicare Health is committed to helping
+                            people
+                            live healthier lives.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Vaccination</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Day Care</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Emergency</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Genral Checkups</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-uppercase">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Health Care Tips
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> Mumbai, Maharashtra, India</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            chaudharyashlok@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> 7767012860</p>
+                        <p><i class="fas fa-print me-3"></i> 7499535500</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="https://github.com/Ashlok2003">chaudharyashlok@Junior_Developer</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- Footer section ends Here -->
+    <section>
+        <div class="container">
+            <div class="row texting text-center py-5 px-5">
+                <h1>Thanks For Visiting !</h1>
+            </div>
+        </div>
+    </section>
+    <!-- Bootstrap CDN Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script>
+        document.querySelector('.book').addEventListener('click', () => {
+            window.location.href = 'login.html';
+        })
+    </script>
+</body>
+
+</html>

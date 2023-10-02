@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css"
+        integrity="sha512-6qkvBbDyl5TDJtNJiC8foyEVuB6gxMBkrKy67XpqnIDxyvLLPJzmTjAj1dRJfNdmXWqD10VbJoeN4pOQqDwvRA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"
+        integrity="sha512-2hIlk2fL+NNHkULe9gGdma/T5vSYk80U5tvAFSy3dGEl8XD4h2i6frQvHv5B+bm/Itmi8nJ6krAcj5FWFcBGig=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid px-3 py-3">
+        <!-- Navbar Section -->
+        <!-- Navbar Section End Here-->
+        <div class="header d-flex align-item-center justify-content-between">
+            <div class="right-header mt-3">
+                <h2 class="display-5 fw-bolder text-danger"><i class="fa-solid fa-hospital"></i> Medicare</h2>
+            </div>
+
+            <div class="left-header d-flex align-item-center justify-content-between">
+                <ul class="list-group list-group-horizontal list-group-flush mt-3 mx-auto">
+                    <li class="list-group-item fw-bolder">Home</li>
+                    <li class="list-group-item fw-bolder">Covid Tracker</li>
+                    <li class="list-group-item fw-bolder">Donate Us</li>
+                </ul>
+                <img height="90px" width="60px" id="emblem" class="ms-3 me-3" src="./emblem.png" alt="">
+                <img height="90px" width="90px" class='user img-fluid ms-3'
+                    src="https://static.thenounproject.com/png/5034901-200.png" alt="" data-bs-toggle="modal"
+                    data-bs-target="#myModal">
+            </div>
+        </div>
+        <hr>
+    </div>
+
+
+    <!-- Modal Box for User Tab -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title username">Ashlok Chaudhary</h4>
+                    <button type="button" class="close border fw-bolder"
+                        data-bs-dismiss="modal"><big>&times;</big></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h4 class="contact fw-bold">+91 7767012860</h4>
+                    <p class="lead adddress">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores saepe
+                        repudiandae
+                        laboriosam facilis esse vitae soluta numquam illum non asperiores.</p>
+
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success Acknowledgement" id="Acknowledgement" disabled
+                        data-bs-toggle="modal" data-bs-target="#myModal2">Acknowledgement</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal box for consent form -->
+    <div id="myModal1" class="modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Consumer Consent Form</h4>
+                    <button type="button" class="close border fw-bolder"
+                        data-bs-dismiss="modal"><big>&times;</big></button>
+                </div>
+                <h5 class=" text-start text-danger fw-bolder">* Please FIll This Concent Form To Book Vaccaination</h5>
+                <p class=" text-start lead fw-bolder">
+                    I Mr/Mrs/Ms. <span class="name"></span> understand that the COVID-19 vaccine is intended to provide
+                    protection against the COVID-19 virus, and I have been provided with information regarding the
+                    vaccine's potential benefits and risks.
+                    I confirm that I have provided accurate and complete information about my medical history, including
+                    any known allergies, underlying medical conditions, or medications I am currently taking.
+                    I am aware that vaccination is subject to eligibility criteria established by health authorities,
+                    and I meet the eligibility criteria for receiving the vaccine as per current guidelines.
+                </p>
+                <h2>Terms & Conditions </h2>
+                <p class=" text-start lead">
+                    Eligible individuals must provide accurate medical information and consent.
+                    Vaccines may vary in availability and carry potential side effects.
+                    Privacy and data security are maintained for patient information.
+                    Adherence to vaccination guidelines and post-vaccine recommendations is required.
+                    The service provider reserves the right to refuse service and may update terms as needed.
+                </p>
+                <label class="checkbox-label text-left">
+                    <input type="checkbox" name="item1"> The person should be in generally good health on the day of
+                    vaccination, without any acute illness or fever. Vaccination may be postponed if the individual is
+                    currently unwell.
+                </label>
+                <label class="checkbox-label text-left">
+                    <input type="checkbox" name="item2"> Individuals with a history of severe allergic reactions
+                    (anaphylaxis) to vaccine components or previous doses of the same vaccine should consult a
+                    healthcare provider and may require special precautions.
+                </label>
+                <label class="checkbox-label text-left">
+                    <input type="checkbox" name="item3"> Some vaccines may have specific recommendations regarding
+                    pregnancy and breastfeeding. It's important to consult with a healthcare provider to determine if
+                    vaccination is appropriate during these conditions.
+                </label>
+                <div class="d-flex align-items-center justify-content-between">
+                    <button class="btn btn-success submit" id="submit-consent">Submit</button>
+                    <img src="./ffff.png" alt="">
+                    <button class="btn btn-danger d-flex align-items-center justify-content-between"
+                        data-bs-dismiss="modal" id="close-consent">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid px-3 main">
+        <div class="row py-3 d-flex align-items-center justify-content-between">
+            <div class="col-md-3">
+                <!-- Doctor Image-->
+                <img class='ms-5' src="./side.png" alt="" height="900px">
+            </div>
+            <!-- Hospital Listing Section -->
+            <div class="col-md-5 py-5 me-4 mx-auto">
+                <div
+                    class="card-body  text-center fw-bolder d-flex align-items-center justify-content-center flex-column">
+                    <h5 class="card-title fw-bolder">Please Select The Vaccination Type</h5>
+                    <ul class="list-group list-group-horizontal list-group-flush">
+                        <li class="list-group-item"><button class="btn btn-primary fw-bolder vaccinetypes"
+                                value="COVAXIN">COVAXIN</button></li>
+                        <li class="list-group-item"><button class="btn btn-secondary fw-bolder vaccinetypes"
+                                value="COVISHILED">COVISHILED</button>
+                        </li>
+                        <li class="list-group-item"><button class="btn btn-danger fw-bolder vaccinetypes"
+                                value="SPUTNIK">SPUTNIK</button></li>
+                        <li class="list-group-item"><button class="btn btn-warning fw-bolder vaccinetypes"
+                                value="SWINE-FLU">SWINE-FLU</button>
+                        </li>
+                        <li class="list-group-item"><button class="btn btn-success fw-bolder vaccinetypes"
+                                value="TETANIS">TETANIS</button></li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title mx-auto fw-bolder text-center">
+                        List
+                        of Available Hospitals</h5>
+                </div>
+                <div class="container scrollable-container">
+                    <div class="row" id="content">
+
+                        <div class="card-body">
+                            <div
+                                class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                <div class="order-md-2 text-center">
+                                    <img src="./dcotrps.jpg" alt="">
+                                </div>
+                                <div class="mx-auto text-md-start text-center order-md-1">
+                                    <h5 class="card-title fw-bolder">ESIS MEDICAL HOSPITAL</h5>
+                                    <p class="card-text fw-light lead">Include plenty of fruits and
+                                        vegetables
+                                        for essential vitamins and
+                                        minerals. Choose lean sources of protein like chicken, fish,
+                                        beans,
+                                        and tofu. Opt for whole grains
+                                        over refined ones to provide lasting energy. Don't forget
+                                        healthy
+                                        fats from sources like avocados,
+                                        nuts, and olive oil. This balanced approach ensures you get the
+                                        nutrients your body needs for
+                                        optimal functioning.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <ul class="list-group list-group-horizontal list-group-flush">
+                            <li class="list-group-item"><button class="btn btn-primary fw-bold"
+                                    value="01-01-2023,ESIS"><i class="fa-solid fa-calendar-days"></i>
+                                    01-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-danger fw-bold"
+                                    value="02-01-2023,ESIS"><i class="fa-solid fa-calendar-days"></i>
+                                    02-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-success fw-bold"
+                                    value="03-01-2023,ESIS"><i class="fa-solid fa-calendar-days"></i>
+                                    03-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"
+                                    value="04-01-2023,ESIS"><i class="fa-solid fa-calendar-days"></i>
+                                    04-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"
+                                    value="05-01-2023,ESIS"><i class="fa-solid fa-calendar-days"></i>
+                                    05-01-2023</button></li>
+                        </ul>
+
+
+                    </div>
+                    <div class="row" id="content">
+
+                        <div class="card-body">
+                            <div
+                                class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                <div class="order-md-2 text-center">
+                                    <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                </div>
+                                <div class="mx-auto text-md-start text-center order-md-1">
+                                    <h5 class="card-title fw-bolder">KOKILABEN MEDICAL HOSPITAL</h5>
+                                    <p class="card-text fw-light lead">Include plenty of fruits and
+                                        vegetables
+                                        for essential vitamins and
+                                        minerals. Choose lean sources of protein like chicken, fish,
+                                        beans,
+                                        and tofu. Opt for whole grains
+                                        over refined ones to provide lasting energy. Don't forget
+                                        healthy
+                                        fats from sources like avocados,
+                                        nuts, and olive oil. This balanced approach ensures you get the
+                                        nutrients your body needs for
+                                        optimal functioning.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <ul class="list-group list-group-horizontal list-group-flush">
+                            <li class="list-group-item"><button class="btn btn-primary fw-bold"
+                                    value="01-01-2023,KOKILABEN"><i class="fa-solid fa-calendar-days"></i>
+                                    01-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-danger fw-bold"
+                                    value="02-01-2023,KOKILABEN"><i class="fa-solid fa-calendar-days"></i>
+                                    02-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-success fw-bold"
+                                    value="03-01-2023,KOKILABEN"><i class="fa-solid fa-calendar-days"></i>
+                                    03-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"
+                                    value="04-01-2023,KOKILABEN"><i class="fa-solid fa-calendar-days"></i>
+                                    04-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"
+                                    value="05-01-2023,KOKILABEN"><i class="fa-solid fa-calendar-days"></i>
+                                    05-01-2023</button></li>
+                        </ul>
+
+
+                    </div>
+                    <div class="row" id="content">
+
+                        <div class="card-body">
+                            <div
+                                class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                <div class="order-md-2 text-center">
+                                    <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                </div>
+                                <div class="mx-auto text-md-start text-center order-md-1">
+                                    <h5 class="card-title fw-bolder">TATA MEDICAL HOSPITAL</h5>
+                                    <p class="card-text fw-light lead">Include plenty of fruits and
+                                        vegetables
+                                        for essential vitamins and
+                                        minerals. Choose lean sources of protein like chicken, fish,
+                                        beans,
+                                        and tofu. Opt for whole grains
+                                        over refined ones to provide lasting energy. Don't forget
+                                        healthy
+                                        fats from sources like avocados,
+                                        nuts, and olive oil. This balanced approach ensures you get the
+                                        nutrients your body needs for
+                                        optimal functioning.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <ul class="list-group list-group-horizontal list-group-flush">
+                            <li class="list-group-item"><button class="btn btn-primary fw-bold"
+                                    value="01-01-2023,TATA"><i class="fa-solid fa-calendar-days"></i>
+                                    01-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-danger fw-bold"
+                                    value="02-01-2023,TATA"><i class="fa-solid fa-calendar-days"></i>
+                                    02-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-success fw-bold"
+                                    value="03-01-2023,TATA"><i class="fa-solid fa-calendar-days"></i>
+                                    03-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"
+                                    value="04-01-2023,TATA"><i class="fa-solid fa-calendar-days"></i>
+                                    04-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"
+                                    value="05-01-2023,TATA"><i class="fa-solid fa-calendar-days"></i>
+                                    05-01-2023</button></li>
+                        </ul>
+
+
+                    </div>
+                    <div class="row" id="content">
+
+                        <div class="card-body">
+                            <div
+                                class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                <div class="order-md-2 text-center">
+                                    <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                </div>
+                                <div class="mx-auto text-md-start text-center order-md-1">
+                                    <h5 class="card-title fw-bolder">SANJEEVNI MEDICAL HOSPITAL</h5>
+                                    <p class="card-text fw-light lead">Include plenty of fruits and
+                                        vegetables
+                                        for essential vitamins and
+                                        minerals. Choose lean sources of protein like chicken, fish,
+                                        beans,
+                                        and tofu. Opt for whole grains
+                                        over refined ones to provide lasting energy. Don't forget
+                                        healthy
+                                        fats from sources like avocados,
+                                        nuts, and olive oil. This balanced approach ensures you get the
+                                        nutrients your body needs for
+                                        optimal functioning.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <ul class="list-group list-group-horizontal list-group-flush">
+                            <li class="list-group-item"><button class="btn btn-primary fw-bold"
+                                    value="01-01-2023,SANJEEVNI"><i class="fa-solid fa-calendar-days"></i>
+                                    01-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-danger fw-bold"
+                                    value="02-01-2023,SANJEEVNI"><i class="fa-solid fa-calendar-days"></i>
+                                    02-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-success fw-bold"
+                                    value="03-01-2023,SANJEEVNI"><i class="fa-solid fa-calendar-days"></i>
+                                    03-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"
+                                    value="04-01-2023,SANJEEVNI"><i class="fa-solid fa-calendar-days"></i>
+                                    04-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"
+                                    value="05-01-2023,SANJEEVNI"><i class="fa-solid fa-calendar-days"></i>
+                                    05-01-2023</button></li>
+                        </ul>
+
+
+                    </div>
+                    <div class="row" id="content">
+
+                        <div class="card-body">
+                            <div
+                                class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                <div class="order-md-2 text-center">
+                                    <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                </div>
+                                <div class="mx-auto text-md-start text-center order-md-1">
+                                    <h5 class="card-title fw-bolder">ESIS MEDICAL HOSPITAL</h5>
+                                    <p class="card-text fw-light lead">Include plenty of fruits and
+                                        vegetables
+                                        for essential vitamins and
+                                        minerals. Choose lean sources of protein like chicken, fish,
+                                        beans,
+                                        and tofu. Opt for whole grains
+                                        over refined ones to provide lasting energy. Don't forget
+                                        healthy
+                                        fats from sources like avocados,
+                                        nuts, and olive oil. This balanced approach ensures you get the
+                                        nutrients your body needs for
+                                        optimal functioning.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <ul class="list-group list-group-horizontal list-group-flush">
+                            <li class="list-group-item"><button class="btn btn-primary fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="01-01-2023,"></i>
+                                    01-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-danger fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="02-01-2023,"></i>
+                                    02-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-success fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="03-01-2023,"></i>
+                                    03-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="04-01-2023,"></i>
+                                    04-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="05-01-2023,"></i>
+                                    05-01-2023</button></li>
+                        </ul>
+
+
+                    </div>
+                    <div class="row" id="content">
+
+                        <div class="card-body">
+                            <div
+                                class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                <div class="order-md-2 text-center">
+                                    <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                </div>
+                                <div class="mx-auto text-md-start text-center order-md-1 ">
+                                    <h5 class="card-title fw-bolder">ESIS MEDICAL HOSPITAL</h5>
+                                    <p class="card-text fw-light lead">Include plenty of fruits and
+                                        vegetables
+                                        for essential vitamins and
+                                        minerals. Choose lean sources of protein like chicken, fish,
+                                        beans,
+                                        and tofu. Opt for whole grains
+                                        over refined ones to provide lasting energy. Don't forget
+                                        healthy
+                                        fats from sources like avocados,
+                                        nuts, and olive oil. This balanced approach ensures you get the
+                                        nutrients your body needs for
+                                        optimal functioning.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <ul class="list-group list-group-horizontal list-group-flush">
+                            <li class="list-group-item"><button class="btn btn-primary fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="01-01-2023,"></i>
+                                    01-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-danger fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="02-01-2023,"></i>
+                                    02-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-success fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="03-01-2023,"></i>
+                                    03-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="04-01-2023,"></i>
+                                    04-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="05-01-2023,"></i>
+                                    05-01-2023</button></li>
+                        </ul>
+
+
+                    </div>
+                    <div class="row" id="content">
+
+                        <div class="card-body">
+                            <div
+                                class="inner-card d-flex flex-md-row flex-column align-items-center justify-content-between">
+                                <div class="order-md-2 text-center">
+                                    <img src="./dcotrps.jpg" alt="" height="30px" width="30px">
+                                </div>
+                                <div class="mx-auto text-md-start text-center order-md-1">
+                                    <h5 class="card-title fw-bolder">ESIS MEDICAL HOSPITAL</h5>
+                                    <p class="card-text fw-light lead">Include plenty of fruits and
+                                        vegetables
+                                        for essential vitamins and
+                                        minerals. Choose lean sources of protein like chicken, fish,
+                                        beans,
+                                        and tofu. Opt for whole grains
+                                        over refined ones to provide lasting energy. Don't forget
+                                        healthy
+                                        fats from sources like avocados,
+                                        nuts, and olive oil. This balanced approach ensures you get the
+                                        nutrients your body needs for
+                                        optimal functioning.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <ul class="list-group list-group-horizontal list-group-flush">
+                            <li class="list-group-item"><button class="btn btn-primary fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="01-01-2023,"></i>
+                                    01-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-danger fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="02-01-2023,"></i>
+                                    02-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-success fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="03-01-2023,"></i>
+                                    03-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="04-01-2023,"></i>
+                                    04-01-2023</button></li>
+                            <li class="list-group-item"><button class="btn btn-warning fw-bold"><i
+                                        class="fa-solid fa-calendar-days" value="05-01-2023,"></i>
+                                    05-01-2023</button></li>
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <!-- 5 Steps of Health -->
+                <div class="faq container">
+                    <div>
+                        <img src="./stay-strong-stop-corona-virus-poster-design_66757-412-removebg-preview.png" alt="">
+                    </div>
+                    <!-- faqs section starts here -->
+                    <div class="tabular px-5">
+                        <div class="tab">
+                            <button class="tablinks" data-tab="tab1">STEP 1</button>
+                            <button class="tablinks" data-tab="tab2">STEP 2</button>
+                            <button class="tablinks" data-tab="tab3">STEP 3</button>
+                            <button class="tablinks" data-tab="tab4">STEP 4</button>
+                            <button class="tablinks" data-tab="tab5">STEP 5</button>
+                        </div>
+                        <div class="tabcontent py-5" id="tab1">
+                            <h2 class="display-5 fw-bolder">Balanced Diet</h2>
+                            <p class="lead"> A balanced diet is crucial for overall health. Focus on
+                                incorporating a variety
+                                of
+                                food groups into your meals. Include plenty of fruits and vegetables for
+                                essential vitamins
+                                and
+                                minerals. Choose lean sources of protein like chicken, fish, beans, and
+                                tofu. Opt for whole
+                                grains
+                                over refined ones to provide lasting energy. Don't forget healthy fats
+                                from
+                                sources like
+                                avocados,
+                                nuts, and olive oil. This balanced approach ensures you get the
+                                nutrients
+                                your body needs
+                                for
+                                optimal functioning.
+                                A balanced diet is crucial for overall health. Focus on incorporating a
+                                variety of
+                                food groups into your meals. Include plenty of fruits and vegetables for
+                                essential vitamins
+                                and
+                                minerals. Choose lean sources of protein like chicken, fish, beans, and
+                                tofu. Opt for whole
+                                grains
+                                over refined ones to provide lasting energy. Don't forget healthy fats
+                                from
+                                sources like
+                                avocados,
+                                nuts, and olive oil. This balanced approach ensures you get the
+                                nutrients
+                                your body needs
+                                for
+                                optimal functioning.
+                                A balanced diet is crucial for overall health. Focus on incorporating a
+                                variety of
+                                food groups into your meals. Include plenty of fruits and vegetables for
+                                essential vitamins
+                                and
+                                minerals. Choose lean sources of protein like chicken, fish, beans, and
+                                tofu. Opt for whole
+                                grains
+                                over refined ones to provide lasting energy. Don't forget healthy fats
+                                from
+                                sources like
+                                avocados,
+                                nuts, and olive oil. This balanced approach ensures you get the
+                                nutrients
+                                your body needs
+                                for
+                                optimal functioning.
+                                A balanced diet is crucial for overall health. Focus on incorporating a
+                                variety of
+                                food groups into your meals. Include plenty of fruits and vegetables for
+                                essential vitamins
+                                and
+                                minerals. Choose lean sources of protein like chicken, fish, beans, and
+                                tofu. Opt for whole
+                                grains
+                                over refined ones to provide lasting energy. Don't forget healthy fats
+                                from
+                                sources like
+                                avocados,
+                                nuts, and olive oil. This balanced approach ensures you get the
+                                nutrients
+                                your body needs
+                                for
+                                optimal functioning.</p>
+                        </div>
+                        <div class="tabcontent py-5" id="tab2">
+                            <h2 class="display-5 fw-bolder">Stay Hydrated</h2>
+                            <p class="lead"> Water is essential for various bodily functions, including
+                                digestion,
+                                circulation, and
+                                temperature regulation. Aim to drink at least eight glasses (about 2
+                                liters)
+                                of water per
+                                day.
+                                Adjust this amount based on your activity level and climate. Proper
+                                hydration helps maintain
+                                healthy
+                                skin, aids in detoxification, and keeps your body running smoothly.
+                                Water is essential for various bodily functions, including digestion,
+                                circulation, and
+                                temperature regulation. Aim to drink at least eight glasses (about 2
+                                liters)
+                                of water per
+                                day.
+                                Adjust this amount based on your activity level and climate. Proper
+                                hydration helps maintain
+                                healthy
+                                skin, aids in detoxification, and keeps your body running smoothly.
+                                Water is essential for various bodily functions, including digestion,
+                                circulation, and
+                                temperature regulation. Aim to drink at least eight glasses (about 2
+                                liters)
+                                of water per
+                                day.
+                                Adjust this amount based on your activity level and climate. Proper
+                                hydration helps maintain
+                                healthy
+                                skin, aids in detoxification, and keeps your body running smoothly.
+                                Water is essential for various bodily functions, including digestion,
+                                circulation, and
+                                temperature regulation. Aim to drink at least eight glasses (about 2
+                                liters)
+                                of water per
+                                day.
+                                Adjust this amount based on your activity level and climate. Proper
+                                hydration helps maintain
+                                healthy
+                                skin, aids in detoxification, and keeps your body running smoothly.
+                                Water is essential for various bodily functions, including digestion,
+                                circulation, and
+                                temperature regulation. Aim to drink at least eight glasses (about 2
+                                liters)
+                                of water per
+                                day.
+                                Adjust this amount based on your activity level and climate. Proper
+                                hydration helps maintain
+                                healthy
+                                skin, aids in detoxification, and keeps your body running smoothly.</p>
+                        </div>
+                        <div class="tabcontent py-5" id="tab3">
+                            <h2 class="display-5 fw-bolder">Regular Exercise</h2>
+                            <p class="lead">Regular physical activity is a cornerstone of good health.
+                                Aim
+                                for a mix of
+                                aerobic
+                                exercises (like jogging, swimming, or dancing) and strength training
+                                (using
+                                weights or
+                                resistance
+                                bands) to keep your body strong and fit. Exercise not only helps you
+                                maintain a healthy
+                                weight but
+                                also improves cardiovascular health, boosts mood, and reduces the risk
+                                of
+                                chronic diseases
+                                like
+                                diabetes and heart disease.
+                                Regular physical activity is a cornerstone of good health. Aim for a mix
+                                of
+                                aerobic
+                                exercises (like jogging, swimming, or dancing) and strength training
+                                (using
+                                weights or
+                                resistance
+                                bands) to keep your body strong and fit. Exercise not only helps you
+                                maintain a healthy
+                                weight but
+                                also improves cardiovascular health, boosts mood, and reduces the risk
+                                of
+                                chronic diseases
+                                like
+                                diabetes and heart disease.
+                                Regular physical activity is a cornerstone of good health. Aim for a mix
+                                of
+                                aerobic
+                                exercises (like jogging, swimming, or dancing) and strength training
+                                (using
+                                weights or
+                                resistance
+                                bands) to keep your body strong and fit. Exercise not only helps you
+                                maintain a healthy
+                                weight but
+                                also improves cardiovascular health, boosts mood, and reduces the risk
+                                of
+                                chronic diseases
+                                like
+                                diabetes and heart disease.
+                                Regular physical activity is a cornerstone of good health. Aim for a mix
+                                of
+                                aerobic
+                                exercises (like jogging, swimming, or dancing) and strength training
+                                (using
+                                weights or
+                                resistance
+                                bands) to keep your body strong and fit. Exercise not only helps you
+                                maintain a healthy
+                                weight but
+                                also improves cardiovascular health, boosts mood, and reduces the risk
+                                of
+                                chronic diseases
+                                like
+                                diabetes and heart disease.</p>
+
+                        </div>
+                        <div class="tabcontent py-5" id="tab4">
+                            <h2 class="display-5 fw-bolder">Adequate Sleep</h2>
+                            <p class="lead"> Quality sleep is essential for overall well-being. Aim for
+                                7-9
+                                hours of sleep
+                                each
+                                night, as individual needs can vary. A good night's sleep supports
+                                physical
+                                recovery, mental
+                                clarity, and emotional balance. Establish a regular sleep schedule,
+                                create a
+                                comfortable
+                                sleep
+                                environment, and avoid screens and caffeine close to bedtime to improve
+                                your
+                                sleep quality.
+                                Quality sleep is essential for overall well-being. Aim for 7-9 hours of
+                                sleep each
+                                night, as individual needs can vary. A good night's sleep supports
+                                physical
+                                recovery, mental
+                                clarity, and emotional balance. Establish a regular sleep schedule,
+                                create a
+                                comfortable
+                                sleep
+                                environment, and avoid screens and caffeine close to bedtime to improve
+                                your
+                                sleep quality.
+                                Quality sleep is essential for overall well-being. Aim for 7-9 hours of
+                                sleep each
+                                night, as individual needs can vary. A good night's sleep supports
+                                physical
+                                recovery, mental
+                                clarity, and emotional balance. Establish a regular sleep schedule,
+                                create a
+                                comfortable
+                                sleep
+                                environment, and avoid screens and caffeine close to bedtime to improve
+                                your
+                                sleep quality.
+                                Quality sleep is essential for overall well-being. Aim for 7-9 hours of
+                                sleep each
+                                night, as individual needs can vary. A good night's sleep supports
+                                physical
+                                recovery, mental
+                                clarity, and emotional balance. Establish a regular sleep schedule,
+                                create a
+                                comfortable
+                                sleep
+                                environment, and avoid screens and caffeine close to bedtime to improve
+                                your
+                                sleep quality.
+                                Quality sleep is essential for overall well-being. Aim for 7-9 hours of
+                                sleep each
+                                night, as individual needs can vary. A good night's sleep supports
+                                physical
+                                recovery, mental
+                                clarity, and emotional balance. Establish a regular sleep schedule,
+                                create a
+                                comfortable
+                                sleep
+                                environment, and avoid screens and caffeine close to bedtime to improve
+                                your
+                                sleep quality.
+                            </p>
+
+                        </div>
+
+                        <div class="tabcontent py-5" id="tab5">
+                            <h2 class="display-5 fw-bolder">Stress Management</h2>
+                            <p class="lead">Chronic stress can have a significant impact on your health.
+                                Practice
+                                stress-reduction techniques like meditation, deep breathing, or yoga to
+                                manage stress
+                                effectively.
+                                These practices help lower cortisol levels, reduce anxiety, and improve
+                                overall mental
+                                health.
+                                Additionally, finding hobbies or activities you enjoy can also help
+                                alleviate stress and
+                                promote a
+                                sense of well-being.
+                                Chronic stress can have a significant impact on your health. Practice
+                                stress-reduction techniques like meditation, deep breathing, or yoga to
+                                manage stress
+                                effectively.
+                                These practices help lower cortisol levels, reduce anxiety, and improve
+                                overall mental
+                                health.
+                                Additionally, finding hobbies or activities you enjoy can also help
+                                alleviate stress and
+                                promote a
+                                sense of well-being.
+                                Chronic stress can have a significant impact on your health. Practice
+                                stress-reduction techniques like meditation, deep breathing, or yoga to
+                                manage stress
+                                effectively.
+                                These practices help lower cortisol levels, reduce anxiety, and improve
+                                overall mental
+                                health.
+                                Additionally, finding hobbies or activities you enjoy can also help
+                                alleviate stress and
+                                promote a
+                                sense of well-being.
+                                Chronic stress can have a significant impact on your health. Practice
+                                stress-reduction techniques like meditation, deep breathing, or yoga to
+                                manage stress
+                                effectively.
+                                These practices help lower cortisol levels, reduce anxiety, and improve
+                                overall mental
+                                health.
+                                Additionally, finding hobbies or activities you enjoy can also help
+                                alleviate stress and
+                                promote a
+                                sense of well-being.
+                                Chronic stress can have a significant impact on your health. Practice
+                                stress-reduction techniques like meditation, deep breathing, or yoga to
+                                manage stress
+                                effectively.
+                                These practices help lower cortisol levels, reduce anxiety, and improve
+                                overall mental
+                                health.
+                                Additionally, finding hobbies or activities you enjoy can also help
+                                alleviate stress and
+                                promote a
+                                sense of well-being.</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="container-fluid notice-section px-3 ">
+        <div class="row">
+            <div class="col-md-6  col-sm-12  px-5">
+                <h2 class="display-5 fw-bolder">The Impact of COVID-19 on Global Health</h2>
+                <p class="lead py-5">
+                    The COVID-19 pandemic, caused by the novel coronavirus, has reshaped our world in unprecedented
+                    ways. With its rapid spread, this highly contagious virus has placed immense pressure on healthcare
+                    systems, economies, and daily life. It has exposed vulnerabilities in global public health
+                    infrastructure and underscored the importance of preparedness and international collaboration.
+                    <br>
+                    From lockdowns and social distancing to mask mandates and vaccination campaigns, the response to
+                    COVID-19 has varied widely across the globe. While vaccines have offered hope, new variants continue
+                    to pose challenges. The pandemic has also highlighted disparities in access to healthcare and
+                    resources, disproportionately affecting vulnerable communities.
+                    <br>
+                    As we navigate this ongoing crisis, it serves as a stark reminder of the importance of science,
+                    community, and adaptability in the face of unforeseen challenges. COVID-19 has not only reshaped our
+                    present but will undoubtedly influence our future in numerous ways.
+                    <br>
+                    From lockdowns and social distancing to mask mandates and vaccination campaigns, the response to
+                    COVID-19 has varied widely across the globe. While vaccines have offered hope, new variants continue
+                    to pose challenges. The pandemic has also highlighted disparities in access to healthcare and
+                    resources, disproportionately affecting vulnerable communities.
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-12 notice img-fluid">
+
+            </div>
+        </div>
+    </div>
+    <div class=" downer container-fluid py-3 d-flex align-item-center justify-content-center">
+        <img src="https://services.india.gov.in/assets/images/data-gov-blue.png" alt="" class="img-fluid">
+        <img class = 'remain' src="https://services.india.gov.in/assets/images/cpgrams-blue.png" alt="" class="img-fluid">
+        <img src="https://services.india.gov.in/assets/images/data-gov-blue.png" alt="" class="img-fluid">
+        <img src="https://services.india.gov.in/assets/images/cpgrams-blue.png" alt="" class="img-fluid">
+        <img src="https://services.india.gov.in/assets/images/data-gov-blue.png" alt="" class="img-fluid">
+
+    </div>
+    <!-- Footer section starts here-->
+    <footer class="text-center text-lg-start bg-light text-muted py-5">
+        <!-- Section: Social media -->
+        <section class=" text-danger d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            <!-- Left -->
+            <div class="me-5 d-none d-lg-block">
+                <span>Get connected with us on social networks:</span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="me-4 text-reset">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="fw-bolder fw-dark">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3  mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-danger">
+                            <i class="fas fa-gem me-3 text-danger"></i>Medicare
+                        </h6>
+                        <p>
+                            Medicare Health is one of the largest health solutions companies in Mumbai. They provide a
+                            wide
+                            range of services, including pharmacy services,
+                            health plans, and health and wellness solutions. Medicare Health is committed to helping
+                            people
+                            live healthier lives.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-danger">
+                            Products
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Vaccination</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Day Care</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Emergency</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Genral Checkups</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-uppercase">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-danger">
+                            Health Care Tips
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-danger">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> Mumbai, Maharashtra, India</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            chaudharyashlok@gmail.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> 7767012860</p>
+                        <p><i class="fas fa-print me-3"></i> 7499535500</p>
+                    </div>
+                    <div class="col-md-2">
+                        <img class='img-fluid'
+                            src="data:image/jpeg;base64,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"
+                            alt="">
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center text-danger p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="https://github.com/Ashlok2003">chaudharyashlok@Junior_Developer</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- Footer section ends here-->
+
+    <!-- Sweet Alert CDN integration -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Bootstrap CDN Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

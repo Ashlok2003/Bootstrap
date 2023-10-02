@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+ul {
+    font-size: 30px;
+}
+
+.header ul>li:hover {
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 700;
+    background-color: crimson;
+}
+
+hr {
+    background-color: crimson;
+    border: 1px solid crimson;
+    height: 5px;
+}
+
+
+.scrollable-container {
+    max-height: 70vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #cccccc #f0f0f0;
+
+}
+
+/* Define scrollbar styles for Firefox */
+.scrollable-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+.faq img {
+    height: 550px;
+    width: auto;
+
+}
+
+.tabular button {
+    border-radius: 0px;
+    height: 50px;
+    width: 130px;
+    text-align: center;
+}
+
+.tab button {
+
+    background-color: #90caf8;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tab button:hover {
+    background-color: #103f65;
+}
+
+.tab button.active {
+    background-color: #fff;
+}
+
+.faq {
+    height: auto;
+    width: 100%;
+
+}
+
+.faq .tabcontent {
+    height: 42vh;
+    overflow: hidden;
+}
+
+.inner-card img {
+    height: 20vh;
+    width: 10vw;
+}
+
+.main {
+    margin-top: -100px;
+}
+
+.notice {
+    background-image: url('./xcxcx-removebg-preview.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#myModal {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+}
+
+#myModal1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+
+#myModal1 .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.checkbox-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/*  Adding Responnsive ness */
+/*  Mobile Phones */
+
+@media screen and (max-width: 1070px) {
+    * {
+        font-size: 10px;
+    }
+
+    .left-header ul {
+        display: none;
+    }
+
+    .left-header #emblem {
+        display: none;
+    }
+
+    .left-header .user {
+        margin-top: 10px;
+        height: 50px;
+        width: 50px;
+    }
+
+    .right-header h2 {
+        font-size: 30px
+    }
+
+    .container-fluid .col-md-3 img {
+        display: none;
+    }
+
+    .container-fluid {
+        margin-top: 10px;
+    }
+
+    .container-fluid .card-body .card-text {
+        display: none;
+    }
+
+    .container-fluid .card-body img {
+        height: 90px;
+        width: 80px;
+    }
+
+    .downer img {
+        display: none;
+    }
+
+    .downer img.remain {
+        display: block !important;
+    }
+
+    .notice-section {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CDN Integration -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #F2EAD3;
+        }
+
+        .container img {
+            height: 100vh;
+            width: 50vw;
+        }
+
+        .form-group i {
+            font-size: 30px;
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .col-md-6 {
+            font-size: 25px;
+            margin-top: 18vh;
+        }
+
+        .container input {
+            height: 50px;
+        }
+
+        .header {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container header">
+            <div class="row text-capitalize">
+                <h2 class="display-3 fw-bolder text-danger"><i class="fa-solid fa-hospital"></i> Medicare</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="display-3 fw-bolder text-danger text-center py-3"> Sign Up !</h3>
+                    <form class="mx-1 mx-md-4">
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="text" id="Name" class="form-control" />
+                                <label class="form-label" for="Name">Your Name</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-3">
+                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="email" id="email" class="form-control" />
+                                <label class="form-label" for="email">Your Email</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-3">
+                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill mb-0">
+                                <input type="password" id="password" class="form-control" />
+                                <label class="form-label" for="password">Password</label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row align-items-center mb-3">
+                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                            <div class="form-outline flex-fill">
+                                <input type="password" id="cpassword" class="form-control" />
+                                <label class="form-label" for="cpassword">Confirm your password</label>
+                            </div>
+                        </div>
+
+                        <div class="form-check  mb-5">
+                            <input class="form-check-input" type="checkbox" value="" id="tnc" />
+                            <label class="form-check-label" for="tnc">
+                                I agree all statements in Terms of service
+                            </label>
+                        </div>
+
+                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                            <button type="button" class="btn btn-primary btn-lg">Register</button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <img src="./achievements.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap CDN Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
